@@ -11,11 +11,11 @@ const experiences = [
     date: "Apr 2025 — Present",
     location: "Cairo, Egypt",
     achievements: [
-      "Redesigned the Kazyon Plus app to achieve a 40% faster launch time [cite: 21]",
-      "Re-implemented UI using Android Native to improve performance and user experience [cite: 28]",
-      "Integrated REST APIs and utilized ViewModel for state management [cite: 30]",
-      "Implemented Firebase services for push notifications and analytics [cite: 30]",
-      "Applied Agile methodologies to deliver clean, maintainable code [cite: 31]",
+      "Redesigned the Kazyon Plus app to achieve a 40% faster launch time",
+      "Re-implemented UI using Android Native to improve performance and user experience",
+      "Integrated REST APIs and utilized ViewModel for state management",
+      "Implemented Firebase services for push notifications and analytics",
+      "Applied Agile methodologies to deliver clean, maintainable code",
     ],
   },
   {
