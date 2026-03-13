@@ -65,7 +65,7 @@ export default function Contact() {
         {/* Large kinetic heading */}
         <div
           ref={headingRef}
-          className="font-display text-section md:text-[8vw] font-bold text-white leading-[0.95] mb-16"
+          className="font-display text-section md:text-[6vw] font-bold text-white leading-[0.95] mb-16"
           style={{ perspective: "1000px" }}
         >
           {headingText.split("").map((char, i) => (

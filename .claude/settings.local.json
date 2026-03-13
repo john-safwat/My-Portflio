@@ -14,7 +14,10 @@
       "Bash(node -e \":*)",
       "Bash(npx next build --no-lint)",
       "Bash(npm ls @react-three/fiber @types/three)",
-      "Bash(npx tsc --noEmit --listFiles)"
+      "Bash(npx tsc --noEmit --listFiles)",
+      "Read(//Users/john/Downloads/**)",
+      "Bash(mkdir -p \"/Users/john/Desktop/Apps_Code/My Portflio/public\")",
+      "Bash(cp \"/Users/john/Downloads/video \\(1\\).webm\" \"/Users/john/Desktop/Apps_Code/My Portflio/public/skills-bg.webm\")"
     ]
   }
 }

@@ -138,8 +138,24 @@ export default function Skills() {
       id="skills"
       className="section-padding relative overflow-hidden"
     >
+      {/* Video background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ opacity: 0.3 }}
+        >
+          <source src="/skills-bg.webm" type="video/webm" />
+        </video>
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-bg/60" />
+      </div>
+
       {/* Background purple glow — bright center */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[1]">
         <div
           className="w-[1000px] h-[1000px] rounded-full"
           style={{
@@ -172,21 +188,24 @@ export default function Skills() {
         <style jsx>{`
           .tech-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-width: 1px;
           }
+          
           .tech-card:hover {
-            transform: scale(1.15);
-            border-color: rgba(168, 85, 247, 0.6);
-            background: rgba(168, 85, 247, 0.12);
-            box-shadow: 0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(147, 51, 234, 0.15), inset 0 0 20px rgba(147, 51, 234, 0.1);
+            transform: translateY(-10px) scale(1.20) !important;
+            border-width: 3px;
+            border-color: rgba(255, 255, 255, 1);
+            background: rgba(129, 2, 247, 0.15);
+            box-shadow: 0 0 40px rgba(147, 51, 234, 0.4), 0 0 60px rgba(147, 51, 234, 0.15), inset 0 0 20px rgba(147, 51, 234, 0.1);
           }
-          .tech-card:hover .tech-icon {
-            color: white;
-          }
-          .tech-card:hover .tech-label {
-            color: rgba(255, 255, 255, 0.9);
+
+          /* Base colors: Pure white for both icon and text */
+          .tech-icon,
+          .tech-label {
+            color: #ffffff;
+            transition: all 0.3s ease;
           }
         `}</style>
-
         {/* Tech grid — centered rows */}
         <div ref={gridRef} className="flex flex-col items-center gap-4">
           {techStack.map((row, rowIdx) => (
@@ -205,15 +224,15 @@ export default function Skills() {
                   }}
                   data-cursor-hover
                 >
-                  <tech.Icon className="tech-icon w-7 h-7 mb-1" style={{ color: "rgba(255,255,255,0.4)", transition: "color 0.3s" }} />
-                  <span className="tech-label font-body text-[9px] md:text-[10px] text-center leading-tight px-1 truncate max-w-full" style={{ color: "rgba(255,255,255,0.3)", transition: "color 0.3s" }}>
+                  <tech.Icon className="tech-icon w-7 h-7 mb-1" />
+                  <span className="tech-label font-body text-[9px] md:text-[10px] text-center leading-tight px-1 truncate max-w-full">
                     {tech.name}
                   </span>
                 </div>
               ))}
             </div>
           ))}
-        </div>
+        </div>  
       </div>
     </section>
   );
