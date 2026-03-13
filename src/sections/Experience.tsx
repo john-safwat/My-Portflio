@@ -117,13 +117,13 @@ export default function Experience() {
     <section
       ref={sectionRef}
       id="experience"
-      className="section-padding relative"
+      className="section-padding relative overflow-hidden"
     >
-      <div className="gradient-blob gradient-blob-purple w-[500px] h-[500px] top-1/3 -left-60 absolute" />
+      <div className="gradient-blob gradient-blob-purple w-[250px] h-[250px] md:w-[500px] md:h-[500px] top-1/3 -left-32 md:-left-60 absolute" />
 
       <div className="max-w-6xl mx-auto">
         {/* Section label */}
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-8 md:mb-16">
           <span className="font-body text-sm uppercase tracking-[0.3em] text-accent">
             02
           </span>
@@ -133,7 +133,7 @@ export default function Experience() {
           </span>
         </div>
 
-        <h2 className="font-display text-section font-bold text-white mb-20 leading-[1.1]">
+        <h2 className="font-display text-section font-bold text-white mb-10 md:mb-20 leading-[1.1]">
           Where I&apos;ve <span className="text-accent">worked</span>
         </h2>
 

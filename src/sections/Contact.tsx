@@ -46,9 +46,9 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="section-padding relative min-h-screen flex items-center"
+      className="section-padding relative min-h-screen flex items-center overflow-hidden"
     >
-      <div className="gradient-blob gradient-blob-blue w-[600px] h-[600px] bottom-0 left-1/2 -translate-x-1/2 absolute" />
+      <div className="gradient-blob gradient-blob-blue w-[300px] h-[300px] md:w-[600px] md:h-[600px] bottom-0 left-1/2 -translate-x-1/2 absolute" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Section label */}

@@ -92,8 +92,8 @@ export default function Hero() {
       className="relative h-screen flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Gradient blobs */}
-      <div className="gradient-blob gradient-blob-blue w-[600px] h-[600px] -top-40 -right-40 absolute" />
-      <div className="gradient-blob gradient-blob-purple w-[500px] h-[500px] -bottom-40 -left-40 absolute" />
+      <div className="gradient-blob gradient-blob-blue w-[300px] h-[300px] md:w-[600px] md:h-[600px] -top-20 -right-20 md:-top-40 md:-right-40 absolute" />
+      <div className="gradient-blob gradient-blob-purple w-[250px] h-[250px] md:w-[500px] md:h-[500px] -bottom-20 -left-20 md:-bottom-40 md:-left-40 absolute" />
 
       {/* 3D Shape */}
       <Suspense fallback={null}>

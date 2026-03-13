@@ -100,13 +100,13 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="section-padding relative min-h-screen flex items-center"
+      className="section-padding relative min-h-screen flex items-center overflow-hidden"
     >
-      <div className="gradient-blob gradient-blob-blue w-[400px] h-[400px] top-20 right-0 absolute" />
+      <div className="gradient-blob gradient-blob-blue w-[200px] h-[200px] md:w-[400px] md:h-[400px] top-20 right-0 absolute" />
 
       <div className="max-w-7xl mx-auto w-full">
         {/* Section label */}
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-8 md:mb-16">
           <span className="font-body text-sm uppercase tracking-[0.3em] text-accent">
             01
           </span>
@@ -116,7 +116,7 @@ export default function About() {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left: Editorial text */}
           <div ref={textRef}>
             <h2 className="font-display text-section font-bold text-white mb-8 leading-[1.1]">
@@ -168,7 +168,7 @@ export default function About() {
         {/* Stats */}
         <div
           ref={statsRef}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-20 border-t border-white/5"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-20 pt-12 md:pt-20 border-t border-white/5"
         >
           {stats.map((stat, i) => (
             <div key={i} className="stat-item text-center md:text-left">

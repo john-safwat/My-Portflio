@@ -61,9 +61,9 @@ export default function Training() {
     <section
       ref={sectionRef}
       id="training"
-      className="section-padding relative"
+      className="section-padding relative overflow-hidden"
     >
-      <div className="gradient-blob gradient-blob-purple w-[400px] h-[400px] top-1/4 -right-40 absolute" />
+      <div className="gradient-blob gradient-blob-purple w-[200px] h-[200px] md:w-[400px] md:h-[400px] top-1/4 -right-20 md:-right-40 absolute" />
 
       <div className="max-w-7xl mx-auto">
         {/* Section label */}

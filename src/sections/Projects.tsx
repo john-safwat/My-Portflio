@@ -70,12 +70,12 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-padding relative">
-      <div className="gradient-blob gradient-blob-blue w-[400px] h-[400px] bottom-20 right-0 absolute" />
+    <section id="projects" className="section-padding relative overflow-hidden">
+      <div className="gradient-blob gradient-blob-blue w-[200px] h-[200px] md:w-[400px] md:h-[400px] bottom-20 right-0 absolute" />
 
       <div className="max-w-7xl mx-auto">
         {/* Section label */}
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-8 md:mb-16">
           <span className="font-body text-sm uppercase tracking-[0.3em] text-accent">
             03
           </span>
@@ -85,7 +85,7 @@ export default function Projects() {
           </span>
         </div>
 
-        <h2 className="font-display text-section font-bold text-white mb-20 leading-[1.1]">
+        <h2 className="font-display text-section font-bold text-white mb-10 md:mb-20 leading-[1.1]">
           Selected <span className="text-accent">work</span>
         </h2>
 
