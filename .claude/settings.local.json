@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/john/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/35772452-4ed7-4d35-ac2d-5d37766d14c2/2455a438-41e1-4d48-833a-2a4b77b29d58/skills/docx/**)",
+      "Bash(python scripts/office/unpack.py \"/Users/john/Downloads/John Safwat Boles - Mobile Software Engineer.docx\" /tmp/resume_unpacked/)",
+      "Bash(python3 \"/Users/john/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/35772452-4ed7-4d35-ac2d-5d37766d14c2/2455a438-41e1-4d48-833a-2a4b77b29d58/skills/docx/scripts/office/unpack.py\" \"/Users/john/Downloads/John Safwat Boles - Mobile Software Engineer.docx\" /tmp/resume_unpacked/)",
+      "Bash(pip3 install defusedxml)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(node -e \"const pkg = require\\(''@react-three/fiber/package.json''\\); console.log\\(pkg.version\\)\")",
+      "Bash(npx tsc --version)",
+      "Bash(node -e \"const pkg = require\\(''@types/react/package.json''\\); console.log\\(''@types/react:'', pkg.version\\)\")",
+      "Bash(npm run build)"
+    ]
+  }
+}
