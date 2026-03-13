@@ -15,6 +15,9 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const emailAddress = "johnsafwat362@gmail.com";
+  const mailtoLink = `mailto:${emailAddress}`;
+
   useEffect(() => {
     if (!headingRef.current) return;
 
@@ -51,7 +54,7 @@ export default function Contact() {
         {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="font-body text-sm uppercase tracking-[0.3em] text-accent">
-            06
+            07
           </span>
           <div className="h-[1px] w-16 bg-accent/50" />
           <span className="font-body text-sm uppercase tracking-[0.3em] text-text-muted">
@@ -86,18 +89,37 @@ export default function Contact() {
               <span className="font-body text-xs uppercase tracking-wider text-text-muted block mb-2">
                 Email
               </span>
-              <MagneticButton strength={0.15}>
+              <div className="flex items-center gap-3">
+                <MagneticButton strength={0.15}>
+                  <a
+                    href={mailtoLink}
+                    className="font-display text-xl md:text-2xl text-white hover:text-accent transition-colors duration-300"
+                    data-cursor-hover
+                  >
+                    {emailAddress}
+                  </a>
+                </MagneticButton>
                 <button
                   onClick={copyEmail}
-                  className="font-display text-xl md:text-2xl text-white hover:text-accent transition-colors duration-300 relative group"
+                  className="relative p-2 rounded-full border border-white/10 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 group"
                   data-cursor-hover
+                  aria-label="Copy email"
                 >
-                  johnsafwat362@gmail.com
-                  <span className="absolute -top-8 left-0 text-xs text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                    {copied ? "Copied!" : "Click to copy"}
+                  {copied ? (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  ) : (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-text-muted group-hover:text-accent transition-colors">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                    </svg>
+                  )}
+                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-accent opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    {copied ? "Copied!" : "Copy"}
                   </span>
                 </button>
-              </MagneticButton>
+              </div>
             </div>
 
             {/* Phone */}
@@ -106,7 +128,9 @@ export default function Contact() {
                 Phone
               </span>
               <a
-                href="tel:+201040476728"
+                href="https://wa.me/201040476728"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-display text-xl md:text-2xl text-white hover:text-accent transition-colors duration-300"
                 data-cursor-hover
               >
@@ -127,11 +151,12 @@ export default function Contact() {
           </div>
 
           {/* Social links */}
-          <div className="space-y-6">
-            <span className="font-body text-xs uppercase tracking-wider text-text-muted block mb-4">
+          <div className="flex flex-col gap-8">
+            <span className="font-body text-xs uppercase tracking-wider text-text-muted block mb-1">
               Connect
             </span>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 items-start justify-items-start">
+                                      {/* LinkedIn */}
             <MagneticButton strength={0.15}>
               <a
                 href="https://www.linkedin.com/in/john-safwat-b3645427a/"
@@ -171,6 +196,7 @@ export default function Contact() {
               </a>
             </MagneticButton>
 
+            {/* GitHub */}
             <MagneticButton strength={0.15}>
               <a
                 href="https://github.com/john-safwat"
@@ -209,6 +235,87 @@ export default function Contact() {
                 </svg>
               </a>
             </MagneticButton>
+
+            {/* Instagram */}
+            <MagneticButton strength={0.15}>
+              <a
+                href="https://www.instagram.com/john_s_911/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group"
+                data-cursor-hover
+              >
+                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-accent/50 group-hover:bg-accent/5 transition-all duration-300">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-white">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span className="font-display text-lg text-white group-hover:text-accent transition-colors block">
+                    Instagram
+                  </span>
+                  <span className="font-body text-xs text-text-muted">
+                    /john_s_911
+                  </span>
+                </div>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  className="text-text-muted group-hover:text-accent ml-auto transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                >
+                  <path
+                    d="M1 13L13 1M13 1H4M13 1V10"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </MagneticButton>
+
+            {/* Facebook */}
+            <MagneticButton strength={0.15}>
+              <a
+                href="https://www.facebook.com/john.safwat.77"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group"
+                data-cursor-hover
+              >
+                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-accent/50 group-hover:bg-accent/5 transition-all duration-300">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-white">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span className="font-display text-lg text-white group-hover:text-accent transition-colors block">
+                    Facebook
+                  </span>
+                  <span className="font-body text-xs text-text-muted">
+                    /john-safwat
+                  </span>
+                </div>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  className="text-text-muted group-hover:text-accent ml-auto transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                >
+                  <path
+                    d="M1 13L13 1M13 1H4M13 1V10"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </MagneticButton>
+            </div>
           </div>
         </div>
 

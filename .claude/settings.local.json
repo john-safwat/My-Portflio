@@ -9,7 +9,8 @@
       "Bash(node -e \"const pkg = require\\(''@react-three/fiber/package.json''\\); console.log\\(pkg.version\\)\")",
       "Bash(npx tsc --version)",
       "Bash(node -e \"const pkg = require\\(''@types/react/package.json''\\); console.log\\(''@types/react:'', pkg.version\\)\")",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "WebFetch(domain:www.redoyanulhaque.me)"
     ]
   }
 }

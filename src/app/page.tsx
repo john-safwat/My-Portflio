@@ -10,6 +10,7 @@ import Experience from "@/sections/Experience";
 import Projects from "@/sections/Projects";
 import Skills from "@/sections/Skills";
 import Education from "@/sections/Education";
+import Training from "@/sections/Training";
 import Contact from "@/sections/Contact";
 
 const SmoothScroll = dynamic(() => import("@/components/SmoothScroll"), {
@@ -38,6 +39,7 @@ export default function Home() {
           <Projects />
           <Skills />
           <Education />
+          <Training />
           <Contact />
         </main>
       </SmoothScroll>

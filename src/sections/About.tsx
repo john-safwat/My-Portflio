@@ -5,9 +5,9 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 const stats = [
   { value: 3, suffix: "+", label: "Years Experience" },
-  { value: 6, suffix: "+", label: "Production Apps" },
-  { value: 500, suffix: "%", label: "MAU Growth" },
-  { value: 98, suffix: "%", label: "ANR Rate Reduction" },
+  { value: 7, suffix: "+", label: "Production Apps" },
+  { value: 200, suffix: "+", label: "Students Taught" },
+  { value: 500, suffix: "%", label: "MAU Growth" }
 ];
 
 function AnimatedCounter({
@@ -154,10 +154,10 @@ export default function About() {
               <div className="absolute inset-8 bg-gradient-to-br from-accent/10 to-purple-500/10 rounded-xl flex items-center justify-center backdrop-blur-sm">
                 <div className="text-center">
                   <span className="font-display text-7xl font-bold bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">
-                    JS
+                    John.S
                   </span>
                   <div className="mt-2 font-body text-xs uppercase tracking-[0.3em] text-text-muted">
-                    Developer
+                    Mobile App Developer
                   </div>
                 </div>
               </div>
