@@ -10,7 +10,9 @@
       "Bash(npx tsc --version)",
       "Bash(node -e \"const pkg = require\\(''@types/react/package.json''\\); console.log\\(''@types/react:'', pkg.version\\)\")",
       "Bash(npm run build)",
-      "WebFetch(domain:www.redoyanulhaque.me)"
+      "WebFetch(domain:www.redoyanulhaque.me)",
+      "Bash(node -e \":*)",
+      "Bash(npx next build --no-lint)"
     ]
   }
 }

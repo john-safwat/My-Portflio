@@ -2,155 +2,156 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
+import { IconType } from "react-icons";
+import {
+  SiDart,
+  SiKotlin,
+  SiOpenjdk,
+  SiPython,
+  SiFlutter,
+  SiJetpackcompose,
+  SiAndroid,
+  SiFirebase,
+  SiSqlite,
+  SiGit,
+  SiGithub,
+  SiJira,
+  SiConfluence,
+  SiFigma,
+  SiFastlane,
+  SiGithubactions,
+  SiHive,
+  SiSonar,
+} from "react-icons/si";
+import {
+  TbBrandKotlin,
+  TbApi,
+  TbBell,
+  TbDatabase,
+  TbPackage,
+  TbBolt,
+  TbWorld,
+  TbStar,
+  TbNeedle,
+  TbLayout,
+  TbLayoutDashboard,
+  TbArrowsShuffle,
+  TbWaveSine,
+  TbBinaryTree,
+  TbChartDots,
+  TbServer,
+  TbColumns,
+  TbPalette,
+} from "react-icons/tb";
 
-const skillGroups = [
-  {
-    label: "Languages",
-    skills: ["Dart", "Kotlin", "Java", "Python"],
-  },
-  {
-    label: "Frameworks",
-    skills: [
-      "Flutter",
-      "KMP",
-      "Compose Multiplatform",
-      "Jetpack Compose",
-      "Android Native",
-    ],
-  },
-  {
-    label: "Architecture",
-    skills: ["Clean Architecture", "MVVM", "MVI", "MVC"],
-  },
-  {
-    label: "State Management",
-    skills: ["BLoC / Cubit", "Provider", "ViewModel"],
-  },
-  {
-    label: "Networking",
-    skills: ["Dio", "Retrofit", "Ktor", "OkHttp"],
-  },
-  {
-    label: "DI",
-    skills: ["GetIt", "Injectable", "Hilt", "Koin"],
-  },
-  {
-    label: "Backend & Services",
-    skills: [
-      "Firebase",
-      "Firestore",
-      "Auth",
-      "FCM",
-      "Crashlytics",
-      "Cloud Storage",
-      "Analytics",
-      "REST APIs",
-    ],
-  },
-  {
-    label: "Storage",
-    skills: ["SQLite", "Hive", "Isar", "Room"],
-  },
-  {
-    label: "DevOps & Testing",
-    skills: [
-      "GitHub Actions",
-      "Fastlane",
-      "SonarQube",
-      "Unit Testing",
-      "Widget Testing",
-      "Integration Testing",
-    ],
-  },
-  {
-    label: "Tools",
-    skills: ["Git", "GitHub", "Jira", "Confluence", "Figma", "Adobe XD"],
-  },
+interface TechItem {
+  name: string;
+  Icon: IconType;
+}
+
+const techStack: TechItem[][] = [
+  // Row 1 — Languages & Core Frameworks
+  [
+    { name: "Dart", Icon: SiDart },
+    { name: "Kotlin", Icon: SiKotlin },
+    { name: "Java", Icon: SiOpenjdk },
+    { name: "Python", Icon: SiPython },
+    { name: "Flutter", Icon: SiFlutter },
+    { name: "KMP", Icon: TbBrandKotlin },
+    { name: "Compose", Icon: SiJetpackcompose },
+    { name: "Jetpack", Icon: TbPackage },
+    { name: "Android", Icon: SiAndroid },
+    { name: "Firebase", Icon: SiFirebase },
+    { name: "GitHub", Icon: SiGithub },
+  ],
+  // Row 2 — Architecture & State Management
+  [
+    { name: "Clean Arch", Icon: TbLayout },
+    { name: "MVVM", Icon: TbLayoutDashboard },
+    { name: "MVI", Icon: TbArrowsShuffle },
+    { name: "BLoC", Icon: TbWaveSine },
+    { name: "Provider", Icon: TbBinaryTree },
+    { name: "ViewModel", Icon: TbColumns },
+    { name: "Dio", Icon: TbBolt },
+    { name: "FCM", Icon: TbBell },
+    { name: "Retrofit", Icon: TbChartDots },
+  ],
+  // Row 3 — Networking, DI & Backend
+  [
+    { name: "Ktor", Icon: TbBolt },
+    { name: "OkHttp", Icon: TbWorld },
+    { name: "GetIt", Icon: TbStar },
+    { name: "Hilt", Icon: TbNeedle },
+    { name: "Koin", Icon: TbPackage },
+    { name: "REST APIs", Icon: TbApi },
+    { name: "Firestore", Icon: TbServer },
+  ],
+  // Row 4 — Storage & DevOps
+  [
+    { name: "SQLite", Icon: SiSqlite },
+    { name: "Hive", Icon: SiHive },
+    { name: "Room", Icon: TbDatabase },
+    { name: "GH Actions", Icon: SiGithubactions },
+    { name: "Fastlane", Icon: SiFastlane },
+    { name: "SonarQube", Icon: SiSonar },
+  ],
+  // Row 5 — Tools
+  [
+    { name: "Git", Icon: SiGit },
+    { name: "Jira", Icon: SiJira },
+    { name: "Confluence", Icon: SiConfluence },
+    { name: "Figma", Icon: SiFigma },
+    { name: "Adobe XD", Icon: TbPalette },
+  ],
 ];
 
-// Flatten skills into rows for marquee (alternating)
-function getMarqueeRows() {
-  const allSkills = skillGroups.flatMap((g) =>
-    g.skills.map((s) => ({ skill: s, group: g.label }))
-  );
-
-  const rows: { skill: string; group: string }[][] = [];
-  const perRow = Math.ceil(allSkills.length / 3);
-
-  for (let i = 0; i < 3; i++) {
-    rows.push(allSkills.slice(i * perRow, (i + 1) * perRow));
-  }
-
-  return rows;
-}
-
-function MarqueeRow({
-  items,
-  reverse = false,
-  speed = 30,
-}: {
-  items: { skill: string; group: string }[];
-  reverse?: boolean;
-  speed?: number;
-}) {
-  const rowRef = useRef<HTMLDivElement>(null);
+export default function Skills() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!rowRef.current) return;
-    const duplicated = rowRef.current.querySelector(".marquee-inner") as HTMLElement;
-    if (!duplicated) return;
+    if (!gridRef.current) return;
+    const cards = gridRef.current.querySelectorAll(".tech-card");
 
-    const width = duplicated.offsetWidth / 2;
-
-    gsap.to(duplicated, {
-      x: reverse ? width : -width,
-      duration: speed,
-      ease: "none",
-      repeat: -1,
-      modifiers: {
-        x: (x: string) => {
-          const val = parseFloat(x);
-          if (reverse) {
-            return (val % width) + "px";
-          }
-          return (val % width) + "px";
+    gsap.fromTo(
+      cards,
+      { y: 40, opacity: 0, scale: 0.9 },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.03,
+        duration: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
         },
-      },
-    });
-  }, [reverse, speed]);
+      }
+    );
+  }, []);
 
   return (
-    <div ref={rowRef} className="overflow-hidden py-3">
-      <div
-        className="marquee-inner flex gap-4 w-max"
-        style={{ willChange: "transform" }}
-      >
-        {/* Duplicate items for seamless loop */}
-        {[...items, ...items].map((item, i) => (
-          <span
-            key={i}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 bg-surface hover:border-accent/40 hover:bg-accent/5 transition-all duration-300 whitespace-nowrap group"
-            data-cursor-hover
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent/60 group-hover:bg-accent transition-colors" />
-            <span className="font-body text-sm text-text-secondary group-hover:text-white transition-colors">
-              {item.skill}
-            </span>
-          </span>
-        ))}
+    <section
+      ref={sectionRef}
+      id="skills"
+      className="section-padding relative overflow-hidden"
+    >
+      {/* Background purple glow — bright center */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div
+          className="w-[1000px] h-[1000px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(54, 51, 234, 0.35) 0%, rgba(34, 43, 206, 0.2) 30%, rgba(28, 101, 135, 0.1) 40%, transparent 10%)",
+            filter: "blur(120px)",
+          }}
+        />
       </div>
-    </div>
-  );
-}
+    
 
-export default function Skills() {
-  const rows = getMarqueeRows();
-
-  return (
-    <section id="skills" className="section-padding relative overflow-hidden">
-      <div className="gradient-blob gradient-blob-purple w-[500px] h-[500px] top-0 left-1/2 absolute" />
-
-      <div className="max-w-7xl mx-auto mb-16">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="font-body text-sm uppercase tracking-[0.3em] text-accent">
@@ -162,45 +163,57 @@ export default function Skills() {
           </span>
         </div>
 
-        <h2 className="font-display text-section font-bold text-white mb-6 leading-[1.1]">
-          Tech <span className="text-accent">stack</span>
+        {/* Centered heading */}
+        <h2 className="font-display text-section md:text-[5vw] font-bold text-white mb-20 text-center leading-[1.1]">
+          TECH <span className="text-accent">STACK</span>
         </h2>
-        <p className="font-body text-lg text-text-muted max-w-2xl">
-          Technologies and tools I use to bring ideas to life
-        </p>
-      </div>
 
-      {/* Marquee rows */}
-      <div className="space-y-2">
-        {rows.map((row, i) => (
-          <MarqueeRow
-            key={i}
-            items={row}
-            reverse={i % 2 === 1}
-            speed={35 + i * 5}
-          />
-        ))}
-      </div>
+        {/* Hover styles */}
+        <style jsx>{`
+          .tech-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          .tech-card:hover {
+            transform: scale(1.15);
+            border-color: rgba(168, 85, 247, 0.6);
+            background: rgba(168, 85, 247, 0.12);
+            box-shadow: 0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(147, 51, 234, 0.15), inset 0 0 20px rgba(147, 51, 234, 0.1);
+          }
+          .tech-card:hover .tech-icon {
+            color: white;
+          }
+          .tech-card:hover .tech-label {
+            color: rgba(255, 255, 255, 0.9);
+          }
+        `}</style>
 
-      {/* Skills grid by category (below marquee) */}
-      <div className="max-w-7xl mx-auto mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {skillGroups.map((group, i) => (
-          <div key={i} className="space-y-3">
-            <h4 className="font-display text-xs uppercase tracking-[0.2em] text-accent font-semibold">
-              {group.label}
-            </h4>
-            <div className="space-y-1.5">
-              {group.skills.map((skill, j) => (
-                <p
-                  key={j}
-                  className="font-body text-sm text-text-muted hover:text-white transition-colors"
+        {/* Tech grid — centered rows */}
+        <div ref={gridRef} className="flex flex-col items-center gap-4">
+          {techStack.map((row, rowIdx) => (
+            <div
+              key={rowIdx}
+              className="flex flex-wrap justify-center gap-3 md:gap-4"
+            >
+              {row.map((tech, techIdx) => (
+                <div
+                  key={techIdx}
+                  className="tech-card flex flex-col items-center justify-center w-[72px] h-[72px] md:w-[80px] md:h-[80px] rounded-xl border cursor-default"
+                  style={{
+                    background: "rgba(255,255,255,0.03)",
+                    borderColor: "rgba(255,255,255,0.08)",
+                    backdropFilter: "blur(4px)",
+                  }}
+                  data-cursor-hover
                 >
-                  {skill}
-                </p>
+                  <tech.Icon className="tech-icon w-7 h-7 mb-1" style={{ color: "rgba(255,255,255,0.4)", transition: "color 0.3s" }} />
+                  <span className="tech-label font-body text-[9px] md:text-[10px] text-center leading-tight px-1 truncate max-w-full" style={{ color: "rgba(255,255,255,0.3)", transition: "color 0.3s" }}>
+                    {tech.name}
+                  </span>
+                </div>
               ))}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
