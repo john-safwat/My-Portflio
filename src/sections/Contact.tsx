@@ -81,6 +81,51 @@ export default function Contact() {
           ))}
         </div>
 
+        {/* Download CV CTA */}
+        <div className="mb-16 flex flex-wrap items-center gap-4">
+          <MagneticButton strength={0.15}>
+            <a
+              href="/cv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-accent text-white font-display text-sm uppercase tracking-[0.15em] hover:bg-accent-light transition-colors duration-300"
+              data-cursor-hover
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download CV
+            </a>
+          </MagneticButton>
+          <a
+            href="/John_Safwat_Boles_FullStack_CV.md"
+            download
+            className="font-body text-sm text-text-muted hover:text-accent transition-colors duration-300 underline underline-offset-4"
+            data-cursor-hover
+          >
+            Full-Stack (.md)
+          </a>
+          <a
+            href="/John_Safwat_Boles_Mobile_CV.md"
+            download
+            className="font-body text-sm text-text-muted hover:text-accent transition-colors duration-300 underline underline-offset-4"
+            data-cursor-hover
+          >
+            Mobile (.md)
+          </a>
+        </div>
+
         {/* Contact info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">

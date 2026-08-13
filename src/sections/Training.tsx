@@ -5,28 +5,27 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 const trainingExperiences = [
   {
-    role: "Flutter Instructor",
-    organization: "Route Academy",
-    url: "https://www.linkedin.com/company/routeacademy/posts/?feedView=all",
-    date: "Jun 2024 — Present",
+    role: "Mobile Instructor",
+    organization: "Elevate Tech",
+    url: "https://www.linkedin.com/company/elevatecheg/posts/?feedView=all",
+    date: "Mar 2025 — Feb 2026",
     location: "Cairo, Egypt",
     highlights: [
-      "Improved and developed the content and curriculum for the Flutter track, ensuring a comprehensive learning path from beginner to advanced",
-      "Delivers in-depth courses covering Flutter, Dart, state management, UI/UX design, and problem-solving techniques",
-      "Spearheaded a team of mentors and implemented structured training programs for consistent quality",
+      "Lead an industry-aligned curriculum covering Android Native (Kotlin, Jetpack Compose), Kotlin Multiplatform, and Flutter — Clean Architecture, MVVM/MVI, state management, DI, and CI/CD.",
+      "Conduct technical assessments and code reviews, preparing trainees to ship production-grade applications.",
+      "Promoted from Mobile Mentor (Nov 2024) based on training impact and student outcomes.",
     ],
   },
   {
-    role: "Flutter Mentor",
-    organization: "Elevate Tech",
-    url: "https://www.linkedin.com/company/elevatecheg/posts/?feedView=all",
-    date: "Nov 2024 — Nov 2025",
+    role: "Mobile Instructor",
+    organization: "Route Academy",
+    url: "https://www.linkedin.com/company/routeacademy/posts/?feedView=all",
+    date: "Jul 2025 — Nov 2025",
     location: "Cairo, Egypt",
     highlights: [
-      "Built the system and structure for a unique learning experience, designing the training framework from the ground up",
-      "Led advanced training sessions emphasizing Agile methodologies, Clean Architecture, and CI/CD pipelines",
-      "Facilitated cross-functional collaboration through expert utilization of Jira and Confluence",
-      "Mentored developers on real-world Dart applications with a focus on advanced state management and performance optimization",
+      "Designed and delivered mobile development training in Android Native (Kotlin, Jetpack Compose), Kotlin Multiplatform, and Flutter, guiding students from foundations to advanced proficiency.",
+      "Built hands-on labs aligned to production standards — Clean Architecture, state management, networking, and CI/CD.",
+      "Promoted from Mobile Mentor (Jul 2024) based on training quality and learner progression.",
     ],
   },
 ];

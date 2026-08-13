@@ -191,3 +191,131 @@ body::before {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Printable CV page — clean white sheet, black text */
+.cv-page {
+  background: #ffffff;
+  color: #111111;
+  min-height: 100vh;
+}
+
+.cv-page body { /* no-op selector scoped to cv-page body */
+  background: #ffffff;
+}
+
+.cv-sheet {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 56px 64px;
+  background: #ffffff;
+  color: #111111;
+  font-family: var(--font-inter, system-ui, sans-serif);
+}
+
+.cv-sheet h1,
+.cv-sheet h2,
+.cv-sheet h3 {
+  font-family: var(--font-space-grotesk, system-ui, sans-serif);
+  color: #111111;
+}
+
+.cv-sheet h2 {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 6px;
+  margin: 28px 0 12px;
+  color: #2563eb;
+}
+
+.cv-sheet p,
+.cv-sheet li {
+  color: #333333;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.cv-sheet .cv-name {
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.cv-sheet .cv-title {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.cv-sheet .cv-contact {
+  font-size: 12px;
+  color: #555555;
+}
+
+.cv-sheet .cv-contact a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.cv-sheet .cv-exp-role {
+  font-weight: 600;
+  color: #111111;
+}
+
+.cv-sheet .cv-exp-date {
+  font-size: 12px;
+  color: #777777;
+}
+
+.cv-sheet .cv-exp-company {
+  font-size: 12.5px;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.cv-sheet .cv-skills-line {
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.cv-sheet .cv-skills-line strong {
+  color: #111111;
+}
+
+.cv-sheet .cv-project-title {
+  font-weight: 600;
+  color: #111111;
+}
+
+.cv-sheet .cv-project-tech {
+  font-style: italic;
+  color: #777777;
+  font-size: 12.5px;
+}
+
+/* Hide UI chrome on print */
+@media print {
+  body::before {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+  .cv-no-print {
+    display: none !important;
+  }
+  .cv-sheet {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+  .cv-page {
+    min-height: auto !important;
+  }
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+}

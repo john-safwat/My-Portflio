@@ -115,6 +115,31 @@ export default function Navbar() {
                 </a>
               </MagneticButton>
             ))}
+            <MagneticButton strength={0.15}>
+              <a
+                href="/cv"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/40 text-accent hover:bg-accent/10 transition-colors duration-300 font-body text-sm uppercase tracking-[0.15em] opacity-0"
+                data-cursor-hover
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                CV
+              </a>
+            </MagneticButton>
           </div>
 
           {/* Mobile Hamburger */}
@@ -174,6 +199,20 @@ export default function Navbar() {
                   </a>
                 </motion.div>
               ))}
+              <motion.a
+                href="/cv"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  delay: 0.1 + navItems.length * 0.08,
+                  duration: 0.5,
+                }}
+                className="inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-full border border-accent text-accent font-display text-xl uppercase tracking-wider"
+              >
+                Download CV
+              </motion.a>
             </div>
           </motion.div>
         )}

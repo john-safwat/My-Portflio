@@ -22,6 +22,7 @@ import {
   SiGithubactions,
   SiHive,
   SiSonar,
+  SiSpringboot,
 } from "react-icons/si";
 import {
   TbBrandKotlin,
@@ -42,6 +43,8 @@ import {
   TbServer,
   TbColumns,
   TbPalette,
+  TbTopologyStar,
+  TbLayersIntersect,
 } from "react-icons/tb";
 
 interface TechItem {
@@ -61,14 +64,15 @@ const techStack: TechItem[][] = [
     { name: "Compose", Icon: SiJetpackcompose },
     { name: "Jetpack", Icon: TbPackage },
     { name: "Android", Icon: SiAndroid },
+    { name: "Spring Boot", Icon: SiSpringboot },
     { name: "Firebase", Icon: SiFirebase },
-    { name: "GitHub", Icon: SiGithub },
   ],
   // Row 2 — Architecture & State Management
   [
     { name: "Clean Arch", Icon: TbLayout },
     { name: "MVVM", Icon: TbLayoutDashboard },
     { name: "MVI", Icon: TbArrowsShuffle },
+    { name: "MVC", Icon: TbLayersIntersect },
     { name: "BLoC", Icon: TbWaveSine },
     { name: "Provider", Icon: TbBinaryTree },
     { name: "ViewModel", Icon: TbColumns },
@@ -76,7 +80,7 @@ const techStack: TechItem[][] = [
     { name: "FCM", Icon: TbBell },
     { name: "Retrofit", Icon: TbChartDots },
   ],
-  // Row 3 — Networking, DI & Backend
+  // Row 3 — Networking, DI & Microservices
   [
     { name: "Ktor", Icon: TbBolt },
     { name: "OkHttp", Icon: TbWorld },
@@ -84,9 +88,18 @@ const techStack: TechItem[][] = [
     { name: "Hilt", Icon: TbNeedle },
     { name: "Koin", Icon: TbPackage },
     { name: "REST APIs", Icon: TbApi },
+    { name: "Microservices", Icon: TbTopologyStar },
     { name: "Firestore", Icon: TbServer },
   ],
-  // Row 4 — Storage & DevOps
+  // Row 4 — Backend Frameworks
+  [
+    { name: "Spring Boot", Icon: SiSpringboot },
+    { name: "Spring MVC", Icon: TbLayoutDashboard },
+    { name: "Spring Data JPA", Icon: TbDatabase },
+    { name: "REST Design", Icon: TbApi },
+    { name: "Microservices", Icon: TbTopologyStar },
+  ],
+  // Row 5 — Storage & DevOps
   [
     { name: "SQLite", Icon: SiSqlite },
     { name: "Hive", Icon: SiHive },
@@ -95,7 +108,7 @@ const techStack: TechItem[][] = [
     { name: "Fastlane", Icon: SiFastlane },
     { name: "SonarQube", Icon: SiSonar },
   ],
-  // Row 5 — Tools
+  // Row 6 — Tools
   [
     { name: "Git", Icon: SiGit },
     { name: "Jira", Icon: SiJira },

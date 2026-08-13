@@ -17,7 +17,12 @@
       "Bash(npx tsc --noEmit --listFiles)",
       "Read(//Users/john/Downloads/**)",
       "Bash(mkdir -p \"/Users/john/Desktop/Apps_Code/My Portflio/public\")",
-      "Bash(cp \"/Users/john/Downloads/video \\(1\\).webm\" \"/Users/john/Desktop/Apps_Code/My Portflio/public/skills-bg.webm\")"
+      "Bash(cp \"/Users/john/Downloads/video \\(1\\).webm\" \"/Users/john/Desktop/Apps_Code/My Portflio/public/skills-bg.webm\")",
+      "Bash(npm ls *)",
+      "Bash(cp \"/Users/john/Downloads/John_Safwat_Boles_FullStack_Software_Engineer.docx.md\" \"/Users/john/Desktop/My Portfolio/public/John_Safwat_Boles_FullStack_CV.md\")",
+      "Bash(cp \"/Users/john/Downloads/John_Safwat_Boles_Mobile_Software_Engineer.md\" \"/Users/john/Desktop/My Portfolio/public/John_Safwat_Boles_Mobile_CV.md\")",
+      "Bash(npm install *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

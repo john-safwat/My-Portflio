@@ -125,22 +125,24 @@ export default function About() {
               </span>
               <span className="about-line block overflow-hidden">
                 <span className="inline-block">
-                  future of <span className="text-accent">mobile</span>
+                  future of <span className="text-accent">full-stack</span>
                 </span>
               </span>
             </h2>
 
             <div className="space-y-6">
               <p className="about-line font-body text-lg text-text-secondary leading-relaxed">
-                Results-driven Mobile Application Developer with 3+ years of
-                experience architecting production-grade applications across
-                Flutter, Kotlin Multiplatform, and Android Native.
+                Full-Stack Software Engineer with 3+ years building
+                production-grade apps in Kotlin and Jetpack Compose, cross-platform
+                delivery in Kotlin Multiplatform and Flutter, and backend services
+                in Java and Spring Boot.
               </p>
               <p className="about-line font-body text-lg text-text-muted leading-relaxed">
-                Passionate about crafting seamless cross-platform experiences
-                that scale. From reducing ANR rates to driving 500% MAU growth,
-                I focus on performance, clean architecture, and delivering real
-                business impact.
+                Hands-on in the on-demand and super-app space — ride-hailing-style
+                customer apps, last-mile delivery tooling with GPS route tracking,
+                and the Ordering and Loyalty backend services powering a multi-country
+                super-app live in Egypt and Morocco. Reduced ANR rate by 98%, grew
+                MAU by 500%, and cut app launch time by 40%.
               </p>
             </div>
           </div>
@@ -157,7 +159,7 @@ export default function About() {
                     John.S
                   </span>
                   <div className="mt-2 font-body text-xs uppercase tracking-[0.3em] text-text-muted">
-                    Mobile App Developer
+                    Full-Stack Engineer
                   </div>
                 </div>
               </div>

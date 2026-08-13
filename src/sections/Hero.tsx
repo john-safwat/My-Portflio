@@ -136,16 +136,16 @@ export default function Hero() {
         {/* Subtitle */}
         <div ref={subtitleRef} className="opacity-0">
           <h2 className="font-display text-xl md:text-3xl text-text-secondary font-medium mb-4">
-            Mobile Application Developer
+            Full-Stack Software Engineer
           </h2>
         </div>
 
         {/* Tagline */}
         <div ref={taglineRef} className="opacity-0">
           <p className="font-body text-sm md:text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
-            Crafting seamless cross-platform experiences with Flutter,
+            Backend (Java, Spring Boot) &amp; Mobile (Android/Kotlin,
             <br className="hidden md:block" />
-            Kotlin Multiplatform &amp; Android Native
+            Flutter, Kotlin Multiplatform) — end-to-end delivery
           </p>
         </div>
       </div>

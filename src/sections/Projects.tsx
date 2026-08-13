@@ -4,10 +4,19 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
+    title: "Kazyon Ordering & Loyalty Services",
+    tech: "Java, Spring Boot, REST APIs, Microservices",
+    description:
+      "Backend services powering the Kazyon Plus super-app's ordering flow and customer loyalty program — live in production across Egypt and Morocco. Built as REST/microservice APIs consumed by the Android/iOS mobile clients.",
+    github: "",
+    googlePlay: "",
+    appStore: "",
+  },
+  {
     title: "Kazyon Plus",
     tech: "Kotlin Multiplatform, Compose Multiplatform, Android Native",
     description:
-      "Production super app migrated from Android Native to KMP. MVI architecture, secure payments, 40% cold-start improvement.",
+      "Production super app migrated from Android Native to KMP. MVI architecture, secure payment integration, and a 40% cold-start improvement.",
     github: "",
     googlePlay: "https://play.google.com/store/apps/details?id=com.kazyon.customer&hl=en",
     appStore: "https://apps.apple.com/eg/app/kazyon-plus/id1584830119",
@@ -16,7 +25,7 @@ const projects = [
     title: "Kazyon Biker",
     tech: "Android Native, Kotlin, Jetpack Compose",
     description:
-      "Field operations app for delivery heroes. Order assignment, GPS tracking, delivery confirmation, advanced caching.",
+      "Field operations app for delivery agents — order assignment, GPS route tracking, and delivery confirmation, with advanced caching to reduce data use and speed launch.",
     github: "",
     googlePlay: "",
     appStore: "",
