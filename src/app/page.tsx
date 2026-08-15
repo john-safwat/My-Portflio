@@ -22,6 +22,7 @@ import ProjectDetailModal from "@/components/modals/ProjectDetailModal";
 import ExperienceDetailModal from "@/components/modals/ExperienceDetailModal";
 import TrainingDetailModal from "@/components/modals/TrainingDetailModal";
 import CVModal from "@/components/modals/CVModal";
+import CoverLetterModal from "@/components/modals/CoverLetterModal";
 
 const SmoothScroll = dynamic(() => import("@/components/SmoothScroll"), {
   ssr: false,
@@ -42,6 +43,7 @@ function PortfolioContent() {
   const [selectedExperience, setSelectedExperience] = useState<ExperienceItem | null>(null);
   const [selectedTraining, setSelectedTraining] = useState<TrainingItem | null>(null);
   const [isCVOpen, setIsCVOpen] = useState(false);
+  const [isCoverLetterOpen, setIsCoverLetterOpen] = useState(false);
 
   // Check URL query parameters for deep linking
   useEffect(() => {
@@ -67,6 +69,8 @@ function PortfolioContent() {
 
     if (viewParam === "cv") {
       setIsCVOpen(true);
+    } else if (viewParam === "cover-letter" || viewParam === "letter") {
+      setIsCoverLetterOpen(true);
     }
   }, [searchParams]);
 
@@ -99,6 +103,13 @@ function PortfolioContent() {
     }
   };
 
+  const handleCloseCoverLetter = () => {
+    setIsCoverLetterOpen(false);
+    if (searchParams.get("view") === "cover-letter" || searchParams.get("view") === "letter") {
+      router.replace("/", { scroll: false });
+    }
+  };
+
   return (
     <>
       {!preloaderDone && (
@@ -109,7 +120,7 @@ function PortfolioContent() {
         <Navbar onOpenCVModal={() => setIsCVOpen(true)} />
         <main>
           <Hero />
-          <About />
+          <About onOpenCoverLetter={() => setIsCoverLetterOpen(true)} />
           <Experience onOpenExperienceModal={(item) => setSelectedExperience(item)} />
           <Projects onOpenProjectModal={(project) => setSelectedProject(project)} />
           <Skills />
@@ -144,6 +155,11 @@ function PortfolioContent() {
       <CVModal
         isOpen={isCVOpen}
         onClose={handleCloseCV}
+      />
+
+      <CoverLetterModal
+        isOpen={isCoverLetterOpen}
+        onClose={handleCloseCoverLetter}
       />
     </>
   );
