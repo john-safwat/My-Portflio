@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { TbFileText, TbExternalLink, TbDownload, TbQuote } from "react-icons/tb";
+import { TbFileText, TbExternalLink, TbDownload } from "react-icons/tb";
 
 const stats = [
   { value: 3, suffix: "+", label: "Years Experience" },
@@ -150,7 +150,7 @@ export default function About({ onOpenCoverLetter }: AboutProps) {
         </div>
 
         {activeTab === "story" ? (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
             {/* Left: Editorial text */}
             <div ref={textRef} className="lg:col-span-7">
               <h2 className="font-display text-section font-bold text-white mb-8 leading-[1.1]">
@@ -201,45 +201,21 @@ export default function About({ onOpenCoverLetter }: AboutProps) {
               </div>
             </div>
 
-            {/* Right: Glassmorphic Cover Letter preview card */}
-            <div className="lg:col-span-5 relative">
-              <div
-                onClick={onOpenCoverLetter}
-                className="p-6 sm:p-8 rounded-3xl bg-surface border border-white/10 hover:border-accent/40 transition-all duration-300 group cursor-pointer relative overflow-hidden shadow-2xl shadow-black/40"
-              >
-                {/* Glow accent */}
-                <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl group-hover:bg-accent/20 transition-colors pointer-events-none" />
-
-                {/* Card Header */}
-                <div className="flex items-center justify-between gap-2 mb-4 pb-4 border-b border-white/5">
-                  <div className="flex items-center gap-2">
-                    <span className="p-2 rounded-xl bg-accent/15 text-accent-light">
-                      <TbQuote className="w-4 h-4" />
+            {/* Right: Abstract geometric visual card */}
+            <div className="lg:col-span-5 relative hidden lg:flex items-center justify-center">
+              <div className="relative w-80 h-80 flex items-center justify-center group cursor-pointer" onClick={onOpenCoverLetter}>
+                {/* Abstract geometric rotated borders */}
+                <div className="absolute inset-0 border border-white/10 rounded-3xl rotate-6 transition-transform duration-700 group-hover:rotate-12" />
+                <div className="absolute inset-3 border border-accent/25 rounded-2xl -rotate-3 transition-transform duration-700 group-hover:-rotate-6" />
+                <div className="absolute inset-6 bg-gradient-to-br from-accent/15 via-[#12121a] to-purple-600/15 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/10 shadow-2xl shadow-accent/10 transition-all duration-500 group-hover:border-accent/40">
+                  <div className="text-center px-4">
+                    <span className="font-display text-6xl xl:text-7xl font-bold bg-gradient-to-r from-[#38bdf8] via-[#60a5fa] to-[#c084fc] bg-clip-text text-transparent tracking-tight">
+                      John.S
                     </span>
-                    <div>
-                      <div className="font-display text-sm font-bold text-white">Letter of Intent</div>
-                      <div className="text-[11px] font-mono text-text-muted">August 9, 2026</div>
+                    <div className="mt-3 font-body text-xs uppercase tracking-[0.25em] text-text-muted font-medium group-hover:text-text-secondary transition-colors">
+                      Full-Stack Engineer
                     </div>
                   </div>
-                  <span className="text-xs font-body text-accent group-hover:text-accent-light flex items-center gap-1 font-semibold">
-                    Open <TbExternalLink className="w-3.5 h-3.5" />
-                  </span>
-                </div>
-
-                {/* Excerpt quote */}
-                <div className="space-y-3 font-body text-xs sm:text-sm text-text-secondary leading-relaxed mb-6">
-                  <p className="font-semibold text-white">Dear Hiring Manager,</p>
-                  <p className="line-clamp-4 text-text-muted">
-                    &ldquo;I&apos;m a Software Engineer with 3+ years of experience building production-grade applications across mobile and backend, most recently at Kazyon Plus. My background spans native Android in Kotlin &amp; Jetpack Compose, Kotlin Multiplatform, Flutter, and Spring Boot backend microservices...&rdquo;
-                  </p>
-                  <div className="p-3 rounded-xl bg-accent/5 border border-accent/15 text-xs text-accent-light font-medium">
-                    ✦ Slashed ANR 7.59% → 0.14% &bull; +500% MAU &bull; Egypt &amp; Morocco
-                  </div>
-                </div>
-
-                <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-text-muted">
-                  <span className="font-display font-semibold text-white">John Safwat Boles</span>
-                  <span className="text-accent group-hover:underline">Click to read full letter &rarr;</span>
                 </div>
               </div>
             </div>
