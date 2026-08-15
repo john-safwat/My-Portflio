@@ -216,82 +216,87 @@ body::before {
 .cv-sheet h2,
 .cv-sheet h3 {
   font-family: var(--font-space-grotesk, system-ui, sans-serif);
-  color: #111111;
+  color: #000000;
 }
 
 .cv-sheet h2 {
   font-size: 15px;
-  font-weight: 600;
-  border-bottom: 1px solid #e5e5e5;
+  font-weight: 700;
+  border-bottom: 1.5px solid #000000;
   padding-bottom: 6px;
   margin: 28px 0 12px;
-  color: #2563eb;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .cv-sheet p,
 .cv-sheet li {
-  color: #333333;
+  color: #111111;
   font-size: 13.5px;
   line-height: 1.55;
 }
 
 .cv-sheet .cv-name {
   font-size: 30px;
-  letter-spacing: 0.04em;
-  margin-bottom: 6px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
 }
 
 .cv-sheet .cv-title {
   font-size: 14px;
-  color: #2563eb;
-  font-weight: 500;
+  color: #111111;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .cv-sheet .cv-contact {
   font-size: 12px;
-  color: #555555;
+  color: #333333;
 }
 
 .cv-sheet .cv-contact a {
-  color: #2563eb;
+  color: #000000;
   text-decoration: none;
 }
 
 .cv-sheet .cv-exp-role {
-  font-weight: 600;
-  color: #111111;
+  font-weight: 700;
+  color: #000000;
 }
 
 .cv-sheet .cv-exp-date {
   font-size: 12px;
-  color: #777777;
+  color: #333333;
+  font-weight: 600;
 }
 
 .cv-sheet .cv-exp-company {
   font-size: 12.5px;
-  color: #555555;
+  color: #333333;
   margin-bottom: 6px;
 }
 
 .cv-sheet .cv-skills-line {
   font-size: 13px;
-  color: #333333;
+  color: #111111;
   margin-bottom: 8px;
 }
 
 .cv-sheet .cv-skills-line strong {
-  color: #111111;
+  color: #000000;
 }
 
 .cv-sheet .cv-project-title {
-  font-weight: 600;
-  color: #111111;
+  font-weight: 700;
+  color: #000000;
 }
 
 .cv-sheet .cv-project-tech {
   font-style: italic;
-  color: #777777;
+  color: #444444;
   font-size: 12.5px;
 }
 
@@ -318,27 +323,131 @@ body::before {
   background: rgba(37, 99, 235, 0.5);
 }
 
-/* Hide UI chrome on print */
+/* Print styles - 100% Monochrome Black & White for Crisp Professional PDF/Print */
 @media print {
+  *,
+  *::before,
+  *::after {
+    color: #000000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #000000 !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   body::before {
     display: none !important;
   }
-  body {
-    background: #ffffff !important;
-    color: #111111 !important;
-  }
-  .cv-no-print {
+
+  .cv-no-print,
+  nav,
+  header.cv-no-print,
+  button,
+  .no-print {
     display: none !important;
   }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
   article {
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
-    background: transparent !important;
-    color: #111111 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
   }
+
+  article header {
+    border-bottom: 1.5px solid #000000 !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    font-family: var(--font-space-grotesk, system-ui, sans-serif) !important;
+  }
+
+  h1 {
+    font-size: 22pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 2px !important;
+  }
+
+  h2 {
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    border-bottom: 1.5px solid #000000 !important;
+    padding-bottom: 3px !important;
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  h3 {
+    font-size: 10.5pt !important;
+    font-weight: 700 !important;
+  }
+
+  p, li, span, strong, em, div {
+    color: #000000 !important;
+  }
+
+  p, li {
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+  }
+
+  ul {
+    list-style-type: disc !important;
+    padding-left: 16px !important;
+    margin-top: 3px !important;
+    margin-bottom: 6px !important;
+  }
+
+  li {
+    margin-bottom: 2px !important;
+  }
+
+  li::marker {
+    color: #000000 !important;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+
+  svg {
+    display: none !important;
+  }
+
+  /* Prevent awkward page breaks inside items */
+  section,
+  .relative,
+  article > section > div > div {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
   @page {
     size: A4;
-    margin: 12mm;
+    margin: 10mm 12mm;
   }
 }
