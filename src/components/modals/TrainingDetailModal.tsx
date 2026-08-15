@@ -159,9 +159,9 @@ export default function TrainingDetailModal({
         {/* Course Modules & Curricula Tracks */}
         {item.tracks && item.tracks.length > 0 && (
           <div className="relative z-10 space-y-4 mb-8">
-            <div className="flex items-center gap-2 text-xs font-body uppercase tracking-wider text-text-muted">
+            <div className="flex items-center gap-2 text-sm font-display font-semibold text-accent-light">
               <TbBook className="w-4 h-4 text-accent" />
-              Curriculum Tracks & Modules Instructed
+              Curriculum Tracks &amp; Modules Instructed
             </div>
             <div className="space-y-4">
               {item.tracks.map((track, i) => (
@@ -199,9 +199,9 @@ export default function TrainingDetailModal({
         {/* Mentorship Methodology */}
         {item.mentorshipMethodology && item.mentorshipMethodology.length > 0 && (
           <div className="relative z-10 mb-8 p-6 rounded-2xl bg-white/[0.02] border border-white/5">
-            <div className="flex items-center gap-2 text-xs font-body uppercase tracking-wider text-accent-light mb-3">
+            <div className="flex items-center gap-2 text-sm font-display font-semibold text-accent-light mb-3">
               <TbBulb className="w-4 h-4" />
-              Instruction & Mentorship Philosophy
+              Instruction &amp; Mentorship Philosophy
             </div>
             <ul className="space-y-2">
               {item.mentorshipMethodology.map((meth, i) => (
@@ -219,8 +219,8 @@ export default function TrainingDetailModal({
 
         {/* Key Technologies Taught */}
         <div className="relative z-10">
-          <h4 className="text-xs font-body uppercase tracking-wider text-text-muted mb-3">
-            Core Technologies & Frameworks Taught
+          <h4 className="text-sm font-display font-semibold text-accent-light mb-3">
+            Core Technologies &amp; Frameworks Taught
           </h4>
           <div className="flex flex-wrap gap-2">
             {item.keyTopicsTaught.map((topic, i) => (

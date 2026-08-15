@@ -37,7 +37,7 @@ function ProjectsPageContent() {
         <div className="mb-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-xs font-body uppercase tracking-[0.2em] text-text-muted hover:text-accent transition-colors group"
+            className="inline-flex items-center gap-2 text-xs font-body text-text-muted hover:text-accent transition-colors group"
           >
             <TbArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span>Back to Portfolio</span>
@@ -48,7 +48,7 @@ function ProjectsPageContent() {
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-3">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-xs uppercase font-body tracking-[0.25em] text-accent font-semibold">
+            <span className="text-xs font-body text-accent font-semibold">
               Archive &amp; Case Studies
             </span>
           </div>
@@ -66,19 +66,19 @@ function ProjectsPageContent() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/5">
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
               <div className="font-display text-2xl sm:text-3xl font-bold text-accent-light">8+</div>
-              <div className="font-body text-xs text-text-muted mt-1 uppercase tracking-wider">Production Apps</div>
+              <div className="font-body text-xs text-text-muted mt-1">Production Apps</div>
             </div>
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
               <div className="font-display text-2xl sm:text-3xl font-bold text-emerald-400">98%</div>
-              <div className="font-body text-xs text-text-muted mt-1 uppercase tracking-wider">ANR Reduction</div>
+              <div className="font-body text-xs text-text-muted mt-1">ANR Reduction</div>
             </div>
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
               <div className="font-display text-2xl sm:text-3xl font-bold text-purple-400">+500%</div>
-              <div className="font-body text-xs text-text-muted mt-1 uppercase tracking-wider">MAU Growth</div>
+              <div className="font-body text-xs text-text-muted mt-1">MAU Growth</div>
             </div>
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
               <div className="font-display text-2xl sm:text-3xl font-bold text-blue-400">2</div>
-              <div className="font-body text-xs text-text-muted mt-1 uppercase tracking-wider">Live Countries</div>
+              <div className="font-body text-xs text-text-muted mt-1">Live Countries</div>
             </div>
           </div>
         </div>

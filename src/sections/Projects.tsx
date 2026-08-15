@@ -10,7 +10,7 @@ interface ProjectsSectionProps {
   onOpenProjectModal?: (project: ProjectItem) => void;
 }
 
-type FilterCategory = "All" | "Full-Stack" | "Android / KMP" | "Flutter" | "Backend";
+type FilterCategory = "All" | "Android / KMP" | "Flutter" | "Backend";
 
 export default function Projects({ onOpenProjectModal }: ProjectsSectionProps) {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
@@ -30,11 +30,11 @@ export default function Projects({ onOpenProjectModal }: ProjectsSectionProps) {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <span className="font-body text-sm uppercase tracking-[0.3em] text-accent font-semibold">
+              <span className="font-body text-sm text-accent font-semibold">
                 03
               </span>
               <div className="h-[1px] w-16 bg-accent/50" />
-              <span className="font-body text-sm uppercase tracking-[0.3em] text-text-muted">
+              <span className="font-body text-sm text-text-muted">
                 Portfolio
               </span>
             </div>
@@ -46,9 +46,9 @@ export default function Projects({ onOpenProjectModal }: ProjectsSectionProps) {
 
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-sm font-body uppercase tracking-wider text-accent hover:text-accent-light transition-colors group shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-body text-accent hover:text-accent-light transition-colors group shrink-0 font-medium"
           >
-            <span>View All Projects Archive</span>
+            <span>View all projects</span>
             <TbArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

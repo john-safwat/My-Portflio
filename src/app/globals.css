@@ -220,9 +220,8 @@ body::before {
 }
 
 .cv-sheet h2 {
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 6px;
   margin: 28px 0 12px;

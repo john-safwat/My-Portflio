@@ -89,7 +89,7 @@ export default function ProjectCard({
         <div className="relative z-10">
           {/* Category & Metric Badge */}
           <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
-            <span className="px-2.5 py-1 rounded-full text-[11px] font-body uppercase tracking-wider bg-white/5 border border-white/10 text-text-muted group-hover:text-accent-light group-hover:border-accent/20 transition-colors">
+            <span className="px-2.5 py-1 rounded-full text-[11px] font-body bg-white/5 border border-white/10 text-text-muted group-hover:text-accent-light group-hover:border-accent/20 transition-colors">
               {project.category}
             </span>
 
@@ -129,8 +129,8 @@ export default function ProjectCard({
 
         {/* Card Bottom: Action CTA & External Links */}
         <div className="relative z-10 pt-4 border-t border-white/5 flex items-center justify-between gap-2 mt-auto">
-          <span className="inline-flex items-center gap-1.5 text-xs font-body uppercase tracking-wider text-accent group-hover:text-accent-light font-semibold transition-colors">
-            Case Study
+          <span className="inline-flex items-center gap-1.5 text-xs font-body text-accent group-hover:text-accent-light font-semibold transition-colors">
+            View case study
             <TbExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>
 

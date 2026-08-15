@@ -17,26 +17,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "John Safwat — Full-Stack Software Engineer",
+  title: "John Safwat — Software Engineer",
   description:
-    "Portfolio of John Safwat Boles — Full-Stack Software Engineer. Backend (Java, Spring Boot) & Mobile (Android/Kotlin, Flutter, Kotlin Multiplatform). 3+ years building production-grade apps and services.",
+    "Portfolio of John Safwat Boles — Software Engineer. Mobile (Android/Kotlin, Flutter, Kotlin Multiplatform) & Backend (Java, Spring Boot). 3+ years building production-grade apps and services.",
   keywords: [
     "John Safwat",
-    "Full-Stack Engineer",
+    "Software Engineer",
+    "Mobile Software Engineer",
     "Mobile Developer",
     "Flutter Developer",
     "Kotlin Multiplatform",
     "Android Developer",
     "Spring Boot",
-    "Backend Engineer",
     "Portfolio",
-    "Cross-platform",
   ],
   authors: [{ name: "John Safwat Boles" }],
   openGraph: {
-    title: "John Safwat — Full-Stack Software Engineer",
+    title: "John Safwat — Software Engineer",
     description:
-      "Portfolio of John Safwat Boles — Full-Stack Software Engineer. Backend (Java, Spring Boot) & Mobile (Android/Kotlin, Flutter, Kotlin Multiplatform).",
+      "Portfolio of John Safwat Boles — Software Engineer specializing in Mobile (Android/Kotlin, Flutter, KMP) & Backend (Java, Spring Boot).",
     url: "https://johnsafwat.dev",
     siteName: "John Safwat Portfolio",
     type: "website",
@@ -44,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Safwat — Full-Stack Software Engineer",
+    title: "John Safwat — Software Engineer",
     description:
-      "Portfolio of John Safwat Boles — Full-Stack Software Engineer. Backend (Java, Spring Boot) & Mobile (Android/Kotlin, Flutter, Kotlin Multiplatform).",
+      "Portfolio of John Safwat Boles — Software Engineer specializing in Mobile (Android/Kotlin, Flutter, KMP) & Backend (Java, Spring Boot).",
   },
   robots: {
     index: true,
@@ -59,7 +58,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "John Safwat Boles",
-  jobTitle: "Full-Stack Software Engineer",
+  jobTitle: "Software Engineer",
   url: "https://johnsafwat.dev",
   email: "johnsafwat362@gmail.com",
   telephone: "+201040476728",

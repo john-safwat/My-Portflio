@@ -21,7 +21,7 @@ export const experienceData: ExperienceItem[] = [
   {
     id: "kazyon-plus",
     slug: "kazyon-plus",
-    role: "Full-Stack Software Engineer",
+    role: "Software Engineer",
     company: "Kazyon Plus",
     url: "https://www.linkedin.com/company/kazyon/posts/?feedView=all",
     date: "Apr 2025 — Present",

@@ -51,7 +51,7 @@ export default function CVPage() {
           {/* Back button */}
           <Link
             href="/"
-            className={`inline-flex items-center gap-2 text-xs uppercase tracking-wider font-body font-semibold transition-colors ${
+            className={`inline-flex items-center gap-2 text-xs font-body font-medium transition-colors ${
               isDarkMode ? "text-text-muted hover:text-white" : "text-gray-600 hover:text-gray-900"
             }`}
           >
@@ -65,23 +65,23 @@ export default function CVPage() {
             <div className={`inline-flex p-1 rounded-full border ${isDarkMode ? "bg-white/5 border-white/10" : "bg-gray-100 border-gray-300"}`}>
               <button
                 onClick={() => setVersion("fullstack")}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-display uppercase tracking-wider transition-all ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-body font-medium transition-all ${
                   version === "fullstack"
                     ? "bg-accent text-white shadow-sm"
                     : isDarkMode ? "text-text-muted hover:text-white" : "text-gray-600 hover:text-black"
                 }`}
               >
-                Full-Stack
+                Software Engineer
               </button>
               <button
                 onClick={() => setVersion("mobile")}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-display uppercase tracking-wider transition-all ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-body font-medium transition-all ${
                   version === "mobile"
                     ? "bg-accent text-white shadow-sm"
                     : isDarkMode ? "text-text-muted hover:text-white" : "text-gray-600 hover:text-black"
                 }`}
               >
-                Mobile
+                Mobile Software Engineer
               </button>
             </div>
 
@@ -103,23 +103,23 @@ export default function CVPage() {
             <a
               href={version === "fullstack" ? "/John_Safwat_Boles_FullStack_CV.md" : "/John_Safwat_Boles_Mobile_CV.md"}
               download
-              className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold border transition-all ${
+              className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-medium border transition-all ${
                 isDarkMode
                   ? "bg-white/5 border-white/10 text-text-secondary hover:bg-white/10 hover:text-white"
                   : "bg-gray-100 border-gray-300 text-gray-700 hover:bg-gray-200"
               }`}
             >
               <TbDownload className="w-3.5 h-3.5 text-emerald-400" />
-              <span>.MD</span>
+              <span>Markdown (.md)</span>
             </a>
 
             {/* Print / Save as PDF */}
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-accent text-white hover:bg-accent-light text-xs uppercase tracking-wider font-semibold shadow-md shadow-accent/25 transition-all"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-accent text-white hover:bg-accent-light text-xs font-medium shadow-md shadow-accent/25 transition-all"
             >
               <TbPrinter className="w-4 h-4" />
-              <span>Print / Save PDF</span>
+              <span>Print / PDF</span>
             </button>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function CVPage() {
           {/* Header */}
           <header className="pb-8 mb-8 border-b border-gray-200 dark:border-white/10">
             <h1 className={`font-display text-3xl sm:text-5xl font-bold tracking-tight mb-2 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-              JOHN SAFWAT BOLES
+              John Safwat Boles
             </h1>
             <p className="font-display text-base sm:text-lg font-semibold text-accent mb-4">
               {data.title}
@@ -202,7 +202,7 @@ export default function CVPage() {
 
           {/* Professional Summary */}
           <section className="mb-10">
-            <h2 className="text-xs uppercase tracking-[0.2em] font-body font-bold text-accent mb-3 pb-1 border-b border-accent/20">
+            <h2 className="text-base font-display font-semibold text-accent mb-3 pb-1 border-b border-accent/20">
               Professional Summary
             </h2>
             <p className={`font-body text-sm sm:text-base leading-relaxed ${isDarkMode ? "text-text-secondary" : "text-gray-800"}`}>
@@ -212,7 +212,7 @@ export default function CVPage() {
 
           {/* Professional Experience */}
           <section className="mb-10">
-            <h2 className="text-xs uppercase tracking-[0.2em] font-body font-bold text-accent mb-6 pb-1 border-b border-accent/20">
+            <h2 className="text-base font-display font-semibold text-accent mb-6 pb-1 border-b border-accent/20">
               Professional Experience
             </h2>
             <div className="space-y-8">
@@ -244,7 +244,7 @@ export default function CVPage() {
 
           {/* Technical Skills */}
           <section className="mb-10">
-            <h2 className="text-xs uppercase tracking-[0.2em] font-body font-bold text-accent mb-4 pb-1 border-b border-accent/20">
+            <h2 className="text-base font-display font-semibold text-accent mb-4 pb-1 border-b border-accent/20">
               Technical Skills Matrix
             </h2>
             <div className="space-y-2.5">
@@ -259,7 +259,7 @@ export default function CVPage() {
 
           {/* Key Projects */}
           <section className="mb-10">
-            <h2 className="text-xs uppercase tracking-[0.2em] font-body font-bold text-accent mb-4 pb-1 border-b border-accent/20">
+            <h2 className="text-base font-display font-semibold text-accent mb-4 pb-1 border-b border-accent/20">
               Key Projects
             </h2>
             <div className="space-y-4">
@@ -281,7 +281,7 @@ export default function CVPage() {
 
           {/* Education */}
           <section className="mb-10">
-            <h2 className="text-xs uppercase tracking-[0.2em] font-body font-bold text-accent mb-3 pb-1 border-b border-accent/20">
+            <h2 className="text-base font-display font-semibold text-accent mb-3 pb-1 border-b border-accent/20">
               Education
             </h2>
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
@@ -297,7 +297,7 @@ export default function CVPage() {
 
           {/* Languages */}
           <section>
-            <h2 className="text-xs uppercase tracking-[0.2em] font-body font-bold text-accent mb-2 pb-1 border-b border-accent/20">
+            <h2 className="text-base font-display font-semibold text-accent mb-2 pb-1 border-b border-accent/20">
               Languages
             </h2>
             <p className={`font-body text-xs sm:text-sm ${isDarkMode ? "text-text-secondary" : "text-gray-700"}`}>

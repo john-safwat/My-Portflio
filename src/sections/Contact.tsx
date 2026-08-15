@@ -40,7 +40,7 @@ export default function Contact() {
     );
   }, []);
 
-  const headingText = "GET IN TOUCH";
+  const headingText = "Get in Touch";
 
   return (
     <section
@@ -53,11 +53,11 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
-          <span className="font-body text-sm uppercase tracking-[0.3em] text-accent">
+          <span className="font-body text-sm text-accent font-semibold">
             07
           </span>
           <div className="h-[1px] w-16 bg-accent/50" />
-          <span className="font-body text-sm uppercase tracking-[0.3em] text-text-muted">
+          <span className="font-body text-sm text-text-muted">
             Contact
           </span>
         </div>
@@ -88,7 +88,7 @@ export default function Contact() {
               href="/cv"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-accent text-white font-display text-sm uppercase tracking-[0.15em] hover:bg-accent-light transition-colors duration-300"
+              className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-accent text-white font-display text-sm hover:bg-accent-light transition-colors duration-300 font-semibold"
               data-cursor-hover
             >
               <svg
@@ -105,7 +105,7 @@ export default function Contact() {
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              Download CV
+              View CV / Resume
             </a>
           </MagneticButton>
           <a
@@ -114,7 +114,7 @@ export default function Contact() {
             className="font-body text-sm text-text-muted hover:text-accent transition-colors duration-300 underline underline-offset-4"
             data-cursor-hover
           >
-            Full-Stack (.md)
+            Software Engineer (.md)
           </a>
           <a
             href="/John_Safwat_Boles_Mobile_CV.md"
@@ -122,7 +122,7 @@ export default function Contact() {
             className="font-body text-sm text-text-muted hover:text-accent transition-colors duration-300 underline underline-offset-4"
             data-cursor-hover
           >
-            Mobile (.md)
+            Mobile Engineer (.md)
           </a>
         </div>
 

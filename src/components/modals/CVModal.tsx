@@ -44,7 +44,6 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
   };
 
   const handlePrint = () => {
-    // Open dedicated CV page with print trigger
     window.open("/cv", "_blank");
   };
 
@@ -52,7 +51,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
     <ModalBackdrop
       isOpen={isOpen}
       onClose={onClose}
-      ariaLabel="Interactive Curriculum Vitae"
+      ariaLabel="Curriculum Vitae"
       maxWidth="max-w-4xl"
     >
       <div className="relative p-6 sm:p-8 md:p-12 text-white">
@@ -66,23 +65,23 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
           <div className="inline-flex p-1 rounded-xl bg-white/5 border border-white/10">
             <button
               onClick={() => setVersion("fullstack")}
-              className={`px-4 py-2 rounded-lg text-xs font-display uppercase tracking-wider transition-all ${
+              className={`px-4 py-2 rounded-lg text-xs font-body font-medium transition-all ${
                 version === "fullstack"
                   ? "bg-accent text-white shadow-md shadow-accent/25"
                   : "text-text-muted hover:text-white"
               }`}
             >
-              Full-Stack CV
+              Software Engineer
             </button>
             <button
               onClick={() => setVersion("mobile")}
-              className={`px-4 py-2 rounded-lg text-xs font-display uppercase tracking-wider transition-all ${
+              className={`px-4 py-2 rounded-lg text-xs font-body font-medium transition-all ${
                 version === "mobile"
                   ? "bg-accent text-white shadow-md shadow-accent/25"
                   : "text-text-muted hover:text-white"
               }`}
             >
-              Mobile CV
+              Mobile Software Engineer
             </button>
           </div>
 
@@ -122,7 +121,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
-                JOHN SAFWAT BOLES
+                John Safwat Boles
               </h2>
               <p className="font-display text-sm sm:text-base text-accent-light font-semibold mt-1">
                 {data.title}
@@ -135,7 +134,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent/10 border border-accent/30 text-accent-light hover:bg-accent/20 text-xs font-medium transition-all shrink-0 self-start md:self-auto"
             >
               <TbFileText className="w-4 h-4" />
-              <span>Dedicated Page View</span>
+              <span>Open Full Page</span>
               <TbExternalLink className="w-3 h-3" />
             </Link>
           </div>
@@ -189,7 +188,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
 
         {/* Section: Professional Summary */}
         <div className="relative z-10 mb-8 p-6 rounded-2xl bg-white/[0.02] border border-white/5">
-          <h3 className="text-xs font-body uppercase tracking-[0.2em] text-accent-light font-bold mb-3">
+          <h3 className="text-sm font-display text-accent-light font-semibold mb-3">
             Professional Summary
           </h3>
           <p className="font-body text-sm sm:text-base text-text-secondary leading-relaxed">
@@ -199,7 +198,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
 
         {/* Section: Experience */}
         <div className="relative z-10 mb-8">
-          <h3 className="text-xs font-body uppercase tracking-[0.2em] text-accent-light font-bold mb-4 pb-2 border-b border-white/10">
+          <h3 className="text-sm font-display text-accent-light font-semibold mb-4 pb-2 border-b border-white/10">
             Professional Experience
           </h3>
           <div className="space-y-6">
@@ -237,7 +236,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
 
         {/* Section: Technical Skills Matrix */}
         <div className="relative z-10 mb-8">
-          <h3 className="text-xs font-body uppercase tracking-[0.2em] text-accent-light font-bold mb-4 pb-2 border-b border-white/10">
+          <h3 className="text-sm font-display text-accent-light font-semibold mb-4 pb-2 border-b border-white/10">
             Technical Skills Matrix
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -255,7 +254,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
 
         {/* Section: Education */}
         <div className="relative z-10 mb-8 p-5 rounded-2xl bg-white/[0.02] border border-white/5">
-          <h3 className="text-xs font-body uppercase tracking-[0.2em] text-accent-light font-bold mb-3">
+          <h3 className="text-sm font-display text-accent-light font-semibold mb-3">
             Education
           </h3>
           <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">

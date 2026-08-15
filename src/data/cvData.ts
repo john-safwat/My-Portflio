@@ -30,12 +30,12 @@ export interface CVContent {
 }
 
 export const fullStackCV: CVContent = {
-  title: "Full-Stack Software Engineer  |  Backend (Java, Spring Boot) & Mobile (Android/Kotlin, Flutter/KMP)",
+  title: "Software Engineer  |  Mobile (Android/Kotlin, Flutter/KMP) & Backend (Java, Spring Boot)",
   summary:
-    "Full-stack Software Engineer with 3+ years building production-grade Android applications in Kotlin and Jetpack Compose, complemented by cross-platform delivery in Kotlin Multiplatform and Flutter, and backend services in Java and Spring Boot. Hands-on experience in the on-demand and super-app space — delivering ride-hailing-style customer apps, last-mile delivery operations tooling with GPS route tracking, and the backend Ordering and Loyalty services powering a multi-country super-app live in Egypt and Morocco. Proven impact at scale: reduced ANR rate by 98%, grew Monthly Active Users by 500%, and cut app launch time by 40%. Strong command of REST/RESTful APIs, Spring Boot microservices, Firebase Cloud Messaging push notifications, Clean Architecture, and Git-based CI/CD.",
+    "Software Engineer with 3+ years building production-grade Android applications in Kotlin and Jetpack Compose, complemented by cross-platform delivery in Kotlin Multiplatform and Flutter, and backend services in Java and Spring Boot. Hands-on experience in the on-demand and super-app space — delivering ride-hailing-style customer apps, last-mile delivery operations tooling with GPS route tracking, and the backend Ordering and Loyalty services powering a multi-country super-app live in Egypt and Morocco. Proven impact at scale: reduced ANR rate by 98%, grew Monthly Active Users by 500%, and cut app launch time by 40%. Strong command of REST/RESTful APIs, Spring Boot microservices, Firebase Cloud Messaging push notifications, Clean Architecture, and Git-based CI/CD.",
   experiences: [
     {
-      role: "Full-Stack Software Engineer",
+      role: "Software Engineer",
       company: "Kazyon Plus (Full-Time)",
       meta: "Super-app / On-demand retail & delivery",
       date: "Apr 2025 – Present",

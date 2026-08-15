@@ -164,7 +164,7 @@ export default function ProjectDetailModal({
                 <div className="font-display text-xl sm:text-2xl font-bold text-accent-light mb-1">
                   {metric.value}
                 </div>
-                <div className="font-body text-xs text-text-muted tracking-wider uppercase">
+                <div className="font-body text-xs text-text-muted">
                   {metric.label}
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function ProjectDetailModal({
             }`}
           >
             <TbSparkles className="w-4 h-4" />
-            Overview & Features
+            Overview &amp; Features
           </button>
 
           <button
@@ -195,7 +195,7 @@ export default function ProjectDetailModal({
             }`}
           >
             <TbLayersIntersect className="w-4 h-4" />
-            Architecture & Design
+            Architecture &amp; Design
           </button>
 
           <button
@@ -235,8 +235,8 @@ export default function ProjectDetailModal({
               className="space-y-6"
             >
               <div>
-                <h3 className="text-sm font-body uppercase tracking-wider text-text-muted mb-3">
-                  Summary & Impact
+                <h3 className="text-sm font-display font-semibold text-accent-light mb-2">
+                  Summary &amp; Impact
                 </h3>
                 <p className="font-body text-base text-text-secondary leading-relaxed">
                   {project.longDescription}
@@ -244,7 +244,7 @@ export default function ProjectDetailModal({
               </div>
 
               <div>
-                <h3 className="text-sm font-body uppercase tracking-wider text-text-muted mb-3">
+                <h3 className="text-sm font-display font-semibold text-accent-light mb-2">
                   Key Capabilities Delivered
                 </h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -272,7 +272,7 @@ export default function ProjectDetailModal({
               className="space-y-6"
             >
               <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display text-lg font-bold text-white mb-3">
+                <h3 className="font-display text-lg font-bold text-white mb-2">
                   Architectural Foundation
                 </h3>
                 <p className="font-body text-sm sm:text-base text-text-secondary leading-relaxed">
@@ -281,7 +281,7 @@ export default function ProjectDetailModal({
               </div>
 
               <div>
-                <h4 className="text-xs uppercase tracking-wider text-text-muted mb-3">
+                <h4 className="text-sm font-display font-semibold text-accent-light mb-2">
                   Architecture Patterns Enforced
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -307,8 +307,8 @@ export default function ProjectDetailModal({
               transition={{ duration: 0.2 }}
               className="space-y-4"
             >
-              <h3 className="text-sm font-body uppercase tracking-wider text-text-muted mb-2">
-                Technical Challenges & Solutions
+              <h3 className="text-sm font-display font-semibold text-accent-light mb-2">
+                Technical Challenges &amp; Solutions
               </h3>
               <div className="space-y-3">
                 {project.technicalChallenges.map((challenge, i) => (
@@ -338,8 +338,8 @@ export default function ProjectDetailModal({
               className="space-y-6"
             >
               <div>
-                <h3 className="text-sm font-body uppercase tracking-wider text-text-muted mb-3">
-                  Core Technologies & Libraries
+                <h3 className="text-sm font-display font-semibold text-accent-light mb-2">
+                  Core Technologies &amp; Libraries
                 </h3>
                 <div className="flex flex-wrap gap-2.5">
                   {project.techTags.map((tag, i) => (

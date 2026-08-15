@@ -194,7 +194,7 @@ export default function Skills() {
 
         {/* Centered heading */}
         <h2 className="font-display text-section md:text-[5vw] font-bold text-white mb-20 text-center leading-[1.1]">
-          TECH <span className="text-accent">STACK</span>
+          Tech <span className="text-accent">Stack</span>
         </h2>
 
         {/* Hover styles */}

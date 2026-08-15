@@ -49,11 +49,11 @@ export default function Training({ onOpenTrainingModal }: TrainingSectionProps) 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <span className="font-body text-sm uppercase tracking-[0.3em] text-accent font-semibold">
+              <span className="font-body text-sm text-accent font-semibold">
                 06
               </span>
               <div className="h-[1px] w-16 bg-accent/50" />
-              <span className="font-body text-sm uppercase tracking-[0.3em] text-text-muted">
+              <span className="font-body text-sm text-text-muted">
                 Mentorship
               </span>
             </div>
@@ -65,9 +65,9 @@ export default function Training({ onOpenTrainingModal }: TrainingSectionProps) 
 
           <Link
             href="/training"
-            className="inline-flex items-center gap-2 text-sm font-body uppercase tracking-wider text-accent hover:text-accent-light transition-colors group shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-body text-accent hover:text-accent-light transition-colors group shrink-0 font-medium"
           >
-            <span>Explore Full Curricula &amp; Labs</span>
+            <span>Explore all training tracks</span>
             <TbArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

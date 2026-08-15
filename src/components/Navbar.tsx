@@ -5,7 +5,7 @@ import { gsap } from "@/lib/gsap";
 import { motion, AnimatePresence } from "framer-motion";
 import MagneticButton from "./MagneticButton";
 import Link from "next/link";
-import { TbFileText, TbChevronDown } from "react-icons/tb";
+import { TbFileText } from "react-icons/tb";
 
 const navItems = [
   { label: "Home", href: "/#home" },
@@ -26,7 +26,6 @@ export default function Navbar({ onOpenCVModal, isInnerPage = false }: NavbarPro
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -104,13 +103,13 @@ export default function Navbar({ onOpenCVModal, isInnerPage = false }: NavbarPro
           </MagneticButton>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-7">
+          <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <MagneticButton key={item.href} strength={0.12}>
                 <a
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`nav-link relative font-body text-xs uppercase tracking-[0.18em] transition-colors duration-300 py-1 ${
+                  className={`nav-link relative font-body text-sm transition-colors duration-300 py-1 ${
                     !isInnerPage && activeSection === item.href.replace("/#", "")
                       ? "text-white font-medium"
                       : "text-text-muted hover:text-white"
@@ -129,77 +128,27 @@ export default function Navbar({ onOpenCVModal, isInnerPage = false }: NavbarPro
               </MagneticButton>
             ))}
 
-            {/* Inner Pages Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                onBlur={() => setTimeout(() => setDropdownOpen(false), 200)}
-                className="nav-link inline-flex items-center gap-1 font-body text-xs uppercase tracking-[0.18em] text-text-muted hover:text-white transition-colors"
-                data-cursor-hover
-              >
-                <span>Pages</span>
-                <TbChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              <AnimatePresence>
-                {dropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.15 }}
-                    className="absolute top-full right-0 mt-2 w-48 p-2 rounded-2xl bg-[#141419] border border-white/10 shadow-2xl backdrop-blur-xl z-50 flex flex-col gap-1"
-                  >
-                    <Link
-                      href="/projects"
-                      className="px-3.5 py-2 rounded-xl text-xs text-text-secondary hover:text-white hover:bg-white/5 transition-colors"
-                    >
-                      📁 Projects Archive
-                    </Link>
-                    <Link
-                      href="/experience"
-                      className="px-3.5 py-2 rounded-xl text-xs text-text-secondary hover:text-white hover:bg-white/5 transition-colors"
-                    >
-                      💼 Career Experience
-                    </Link>
-                    <Link
-                      href="/training"
-                      className="px-3.5 py-2 rounded-xl text-xs text-text-secondary hover:text-white hover:bg-white/5 transition-colors"
-                    >
-                      🎓 Training &amp; Mentorship
-                    </Link>
-                    <Link
-                      href="/cv"
-                      className="px-3.5 py-2 rounded-xl text-xs text-text-secondary hover:text-white hover:bg-white/5 transition-colors"
-                    >
-                      📄 Printable CV Page
-                    </Link>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* CV Modal Trigger Button */}
+            {/* CV Trigger Button */}
             {onOpenCVModal ? (
               <MagneticButton strength={0.15}>
                 <button
                   onClick={onOpenCVModal}
-                  className="nav-link inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-accent/40 bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all duration-300 font-body text-xs uppercase tracking-[0.15em] font-semibold"
+                  className="nav-link inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-accent/40 bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all duration-300 font-body text-xs font-semibold"
                   data-cursor-hover
                 >
                   <TbFileText className="w-3.5 h-3.5" />
-                  <span>Interactive CV</span>
+                  <span>Resume / CV</span>
                 </button>
               </MagneticButton>
             ) : (
               <MagneticButton strength={0.15}>
                 <Link
                   href="/cv"
-                  className="nav-link inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-accent/40 bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all duration-300 font-body text-xs uppercase tracking-[0.15em] font-semibold"
+                  className="nav-link inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-accent/40 bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all duration-300 font-body text-xs font-semibold"
                   data-cursor-hover
                 >
                   <TbFileText className="w-3.5 h-3.5" />
-                  <span>CV</span>
+                  <span>Resume / CV</span>
                 </Link>
               </MagneticButton>
             )}
@@ -252,7 +201,7 @@ export default function Navbar({ onOpenCVModal, isInnerPage = false }: NavbarPro
                   <a
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className={`font-display text-2xl sm:text-3xl font-bold uppercase tracking-wider transition-colors ${
+                    className={`font-display text-2xl sm:text-3xl font-bold transition-colors ${
                       !isInnerPage && activeSection === item.href.replace("/#", "")
                         ? "text-accent"
                         : "text-white hover:text-accent"
@@ -265,31 +214,6 @@ export default function Navbar({ onOpenCVModal, isInnerPage = false }: NavbarPro
 
               <div className="w-16 h-[1px] bg-white/10 my-2" />
 
-              {/* Inner Pages Links */}
-              <div className="flex flex-wrap justify-center gap-3">
-                <Link
-                  href="/projects"
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-body text-text-secondary"
-                >
-                  Projects Page
-                </Link>
-                <Link
-                  href="/experience"
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-body text-text-secondary"
-                >
-                  Experience Page
-                </Link>
-                <Link
-                  href="/training"
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-body text-text-secondary"
-                >
-                  Training Page
-                </Link>
-              </div>
-
               {onOpenCVModal ? (
                 <motion.button
                   onClick={() => {
@@ -299,19 +223,19 @@ export default function Navbar({ onOpenCVModal, isInnerPage = false }: NavbarPro
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.4, duration: 0.4 }}
-                  className="inline-flex items-center gap-2 mt-2 px-7 py-3.5 rounded-full bg-accent text-white font-display text-base uppercase tracking-wider"
+                  className="inline-flex items-center gap-2 mt-2 px-7 py-3.5 rounded-full bg-accent text-white font-display text-base"
                 >
                   <TbFileText className="w-5 h-5" />
-                  View Interactive CV
+                  <span>Resume / CV</span>
                 </motion.button>
               ) : (
                 <Link
                   href="/cv"
                   onClick={() => setIsOpen(false)}
-                  className="inline-flex items-center gap-2 mt-2 px-7 py-3.5 rounded-full bg-accent text-white font-display text-base uppercase tracking-wider"
+                  className="inline-flex items-center gap-2 mt-2 px-7 py-3.5 rounded-full bg-accent text-white font-display text-base"
                 >
                   <TbFileText className="w-5 h-5" />
-                  View Printable CV
+                  <span>Resume / CV</span>
                 </Link>
               )}
             </div>

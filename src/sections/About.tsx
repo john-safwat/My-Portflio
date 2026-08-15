@@ -121,19 +121,19 @@ export default function About() {
           <div ref={textRef}>
             <h2 className="font-display text-section font-bold text-white mb-8 leading-[1.1]">
               <span className="about-line block overflow-hidden">
-                <span className="inline-block">Building the</span>
+                <span className="inline-block">Crafting scalable</span>
               </span>
               <span className="about-line block overflow-hidden">
                 <span className="inline-block">
-                  future of <span className="text-accent">full-stack</span>
+                  modern <span className="text-accent">software &amp; mobile apps</span>
                 </span>
               </span>
             </h2>
 
             <div className="space-y-6">
               <p className="about-line font-body text-lg text-text-secondary leading-relaxed">
-                Full-Stack Software Engineer with 3+ years building
-                production-grade apps in Kotlin and Jetpack Compose, cross-platform
+                Software Engineer with 3+ years building
+                production-grade Android applications in Kotlin and Jetpack Compose, cross-platform
                 delivery in Kotlin Multiplatform and Flutter, and backend services
                 in Java and Spring Boot.
               </p>
@@ -158,8 +158,8 @@ export default function About() {
                   <span className="font-display text-7xl font-bold bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">
                     John.S
                   </span>
-                  <div className="mt-2 font-body text-xs uppercase tracking-[0.3em] text-text-muted">
-                    Full-Stack Engineer
+                  <div className="mt-2 font-body text-xs tracking-wider text-text-muted">
+                    Software Engineer
                   </div>
                 </div>
               </div>

@@ -3,7 +3,7 @@ export interface ProjectItem {
   slug: string;
   title: string;
   subtitle: string;
-  category: "Full-Stack" | "Android / KMP" | "Flutter" | "Backend";
+  category: "Android / KMP" | "Flutter" | "Backend";
   tech: string;
   techTags: string[];
   description: string;

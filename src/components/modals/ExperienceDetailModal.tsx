@@ -161,8 +161,8 @@ export default function ExperienceDetailModal({
         {/* Detailed Engineering Achievements */}
         <div className="relative z-10 space-y-6 mb-8">
           <div>
-            <h4 className="text-xs font-body uppercase tracking-wider text-text-muted mb-3">
-              Key Engineering Contributions & Achievements
+            <h4 className="text-sm font-display font-semibold text-accent-light mb-3">
+              Key Engineering Contributions &amp; Achievements
             </h4>
             <ul className="space-y-3">
               {experience.achievements.map((item, i) => (
@@ -182,9 +182,9 @@ export default function ExperienceDetailModal({
           {/* Architecture Focus */}
           {experience.architectureFocus && (
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
-              <div className="flex items-center gap-2 text-xs font-body uppercase tracking-wider text-accent-light mb-2">
+              <div className="flex items-center gap-2 text-sm font-display font-semibold text-accent-light mb-2">
                 <TbLayersIntersect className="w-4 h-4" />
-                Architecture & Design Philosophy
+                Architecture &amp; Design Philosophy
               </div>
               <p className="font-body text-sm text-text-secondary leading-relaxed">
                 {experience.architectureFocus}
@@ -194,8 +194,8 @@ export default function ExperienceDetailModal({
 
           {/* Tech Stack Badges */}
           <div>
-            <h4 className="text-xs font-body uppercase tracking-wider text-text-muted mb-3">
-              Technologies & Tools Utilized
+            <h4 className="text-sm font-display font-semibold text-accent-light mb-3">
+              Technologies &amp; Tools Utilized
             </h4>
             <div className="flex flex-wrap gap-2">
               {experience.technologies.map((tech, i) => (
