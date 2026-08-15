@@ -30,23 +30,23 @@ export interface CVContent {
 }
 
 export const fullStackCV: CVContent = {
-  title: "Software Engineer  |  Mobile (Android/Kotlin, Flutter/KMP) & Backend (Java, Spring Boot)",
+  title: "Full-Stack Software Engineer  |  Mobile Specialist (Android/Kotlin, Flutter, KMP) & Backend (Java, Spring Boot)",
   summary:
-    "Software Engineer with 3+ years building production-grade Android applications in Kotlin and Jetpack Compose, complemented by cross-platform delivery in Kotlin Multiplatform and Flutter, and backend services in Java and Spring Boot. Hands-on experience in the on-demand and super-app space — delivering ride-hailing-style customer apps, last-mile delivery operations tooling with GPS route tracking, and the backend Ordering and Loyalty services powering a multi-country super-app live in Egypt and Morocco. Proven impact at scale: reduced ANR rate by 98%, grew Monthly Active Users by 500%, and cut app launch time by 40%. Strong command of REST/RESTful APIs, Spring Boot microservices, Firebase Cloud Messaging push notifications, Clean Architecture, and Git-based CI/CD.",
+    "Full-Stack Software Engineer with 3+ years of intensive engineering experience, primarily specialized in production-grade Mobile Development (Android Native with Kotlin & Jetpack Compose, Kotlin Multiplatform, Flutter) alongside robust Backend Engineering in Java and Spring Boot microservices. Deep hands-on experience in high-scale on-demand retail and super-app platforms — delivering customer mobile apps, real-time rider tracking systems, and the resilient ordering & loyalty backend microservices powering live production traffic in Egypt and Morocco. Proven impact at scale: reduced ANR rate by 98%, grew Monthly Active Users by 500%, and cut app launch time by 40%. Expert in Clean Architecture, RESTful API design, Spring Boot microservices, FCM push notifications, and automated CI/CD pipelines.",
   experiences: [
     {
-      role: "Software Engineer",
+      role: "Full-Stack Software Engineer",
       company: "Kazyon Plus (Full-Time)",
       meta: "Super-app / On-demand retail & delivery",
       date: "Apr 2025 – Present",
       location: "Cairo, Egypt",
       achievements: [
-        "Build and maintain a high-traffic super-app for retail and on-demand delivery across Kotlin/Jetpack Compose (Android/iOS via Compose Multiplatform) and Java/Spring Boot on the backend.",
-        "Developed and maintained backend services for Kazyon Ordering Services and the Loyalty System, built with Spring Boot and exposed as REST APIs/microservices consumed by the mobile clients, serving live production traffic across Egypt and Morocco.",
-        "Led the architectural redesign and migration from Android Native to Kotlin Multiplatform, delivering a unified, maintainable cross-platform codebase.",
-        "Drove transformative performance gains: reduced ANR rate from 7.59% to 0.14%, cut crash rate from 6.43% to 0.19%, and achieved a 40% reduction in app launch time.",
-        "Contributed to 500% growth in Monthly Active Users and a 220% increase in online orders through improved stability, faster load times, and a streamlined checkout.",
-        "Engineered Kazyon Biker (Android Native, Kotlin) — a last-mile delivery operations app with order assignment, GPS route tracking, and delivery confirmation; built an Asset Tracker tool in Flutter for real-time monitoring.",
+        "Architect and maintain mobile clients and backend services for a high-traffic retail & on-demand delivery super-app across Kotlin/Jetpack Compose, Kotlin Multiplatform, Flutter, and Java/Spring Boot.",
+        "Developed and maintained backend services for Kazyon Ordering Services and the Loyalty System, built with Spring Boot and exposed as high-throughput REST APIs/microservices serving live production traffic in Egypt and Morocco.",
+        "Led the architectural migration from Android Native to Kotlin Multiplatform (KMP), creating a unified, maintainable cross-platform codebase.",
+        "Drove transformative performance optimizations: reduced ANR rate from 7.59% to 0.14%, cut crash rate from 6.43% to 0.19%, and reduced app launch time by 40%.",
+        "Contributed to 500% growth in Monthly Active Users and 220% increase in online orders through superior app stability and streamlined checkout.",
+        "Engineered Kazyon Biker (Android Native, Kotlin) — last-mile delivery operations app with live GPS route tracking and instant order assignment; built an Asset Tracker tool in Flutter for real-time fleet monitoring.",
         "Integrated mobile clients with backend REST APIs and microservices, and implemented push notifications via Firebase Cloud Messaging.",
       ],
     },

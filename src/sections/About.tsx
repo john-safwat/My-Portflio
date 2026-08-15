@@ -132,10 +132,9 @@ export default function About() {
 
             <div className="space-y-6">
               <p className="about-line font-body text-lg text-text-secondary leading-relaxed">
-                Software Engineer with 3+ years building
-                production-grade Android applications in Kotlin and Jetpack Compose, cross-platform
-                delivery in Kotlin Multiplatform and Flutter, and backend services
-                in Java and Spring Boot.
+                Full-Stack Software Engineer with 3+ years of engineering experience,
+                specializing deeply in Mobile Development (Android Native with Kotlin &amp; Jetpack Compose,
+                Kotlin Multiplatform, and Flutter), complemented by robust Backend Engineering in Java and Spring Boot microservices.
               </p>
               <p className="about-line font-body text-lg text-text-muted leading-relaxed">
                 Hands-on in the on-demand and super-app space — ride-hailing-style
@@ -159,7 +158,7 @@ export default function About() {
                     John.S
                   </span>
                   <div className="mt-2 font-body text-xs tracking-wider text-text-muted">
-                    Software Engineer
+                    Full-Stack Software Engineer
                   </div>
                 </div>
               </div>

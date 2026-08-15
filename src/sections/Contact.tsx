@@ -114,7 +114,7 @@ export default function Contact() {
             className="font-body text-sm text-text-muted hover:text-accent transition-colors duration-300 underline underline-offset-4"
             data-cursor-hover
           >
-            Software Engineer (.md)
+            Full-Stack CV (.md)
           </a>
           <a
             href="/John_Safwat_Boles_Mobile_CV.md"
@@ -122,7 +122,7 @@ export default function Contact() {
             className="font-body text-sm text-text-muted hover:text-accent transition-colors duration-300 underline underline-offset-4"
             data-cursor-hover
           >
-            Mobile Engineer (.md)
+            Mobile CV (.md)
           </a>
         </div>
 

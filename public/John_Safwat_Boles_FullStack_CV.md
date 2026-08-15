@@ -1,6 +1,6 @@
 **JOHN SAFWAT BOLES**
 
-**Full-Stack Software Engineer  |  Backend (Java, Spring Boot) & Mobile (Android/Kotlin, Flutter/KMP)**
+**Full-Stack Software Engineer  |  Mobile Specialist (Android/Kotlin, Flutter, KMP) & Backend (Java, Spring Boot)**
 
 johnsafwat362@gmail.com  |  \+20 104 047 6728  |  Cairo, Egypt 
 

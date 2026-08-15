@@ -71,7 +71,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
                   : "text-text-muted hover:text-white"
               }`}
             >
-              Software Engineer
+              Full-Stack Software Engineer
             </button>
             <button
               onClick={() => setVersion("mobile")}

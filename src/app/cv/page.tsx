@@ -71,7 +71,7 @@ export default function CVPage() {
                     : isDarkMode ? "text-text-muted hover:text-white" : "text-gray-600 hover:text-black"
                 }`}
               >
-                Software Engineer
+                Full-Stack Software Engineer
               </button>
               <button
                 onClick={() => setVersion("mobile")}
