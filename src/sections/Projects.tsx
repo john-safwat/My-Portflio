@@ -1,115 +1,91 @@
 "use client";
 
+import { useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
+import { ProjectItem, projectsData } from "@/data/projectsData";
+import Link from "next/link";
+import { TbArrowRight, TbFilter } from "react-icons/tb";
 
-const projects = [
-  {
-    title: "Kazyon Ordering & Loyalty Services",
-    tech: "Java, Spring Boot, REST APIs, Microservices",
-    description:
-      "Backend services powering the Kazyon Plus super-app's ordering flow and customer loyalty program — live in production across Egypt and Morocco. Built as REST/microservice APIs consumed by the Android/iOS mobile clients.",
-    github: "",
-    googlePlay: "",
-    appStore: "",
-  },
-  {
-    title: "Kazyon Plus",
-    tech: "Kotlin Multiplatform, Compose Multiplatform, Android Native",
-    description:
-      "Production super app migrated from Android Native to KMP. MVI architecture, secure payment integration, and a 40% cold-start improvement.",
-    github: "",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.kazyon.customer&hl=en",
-    appStore: "https://apps.apple.com/eg/app/kazyon-plus/id1584830119",
-  },
-  {
-    title: "Kazyon Biker",
-    tech: "Android Native, Kotlin, Jetpack Compose",
-    description:
-      "Field operations app for delivery agents — order assignment, GPS route tracking, and delivery confirmation, with advanced caching to reduce data use and speed launch.",
-    github: "",
-    googlePlay: "",
-    appStore: "",
-  },
-  {
-    title: "Sheft",
-    tech: "Flutter, Firebase, REST APIs",
-    description:
-      "Connects brands with content creators. Real-time messaging, video-request workflows, cross-platform deployment.",
-    github: "",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.moalen.sheft_app&hl=en",
-    appStore: "https://apps.apple.com/eg/app/sheft/id6748038220",
-  },
-  {
-    title: "Qurah",
-    tech: "Flutter, Firebase, REST APIs",
-    description:
-      "Saudi Arabia's first water-services app. Real-time order tracking, technician matching, electronic payments.",
-    github: "",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.qarah.userapp&hl=en",
-    appStore: "https://apps.apple.com/eg/app/qarah-%D9%82%D8%B1%D8%A7%D8%AD/id6749554152",
-  },
-    {
-    title: "Qurah-Provider",
-    tech: "Flutter, Firebase, REST APIs",
-    description:
-      "Saudi Arabia's first water-services app. Real-time order tracking, technician matching, electronic payments.",
-    github: "",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.qarah.providerapp&hl=en",
-    appStore: "https://apps.apple.com/eg/app/qarah-provider/id6749553815",
-  },
-  {
-    title: "2Sooq",
-    tech: "Flutter, BLoC, Firebase",
-    description:
-      "Cross-platform marketplace with EN/AR support, real-time push notifications, secure payment flows.",
-    github: "",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.linkyou.sooq&hl=en",
-    appStore: "https://apps.apple.com/eg/app/2sooq/id1574532077",
-  },
-  {
-    title: "Canadian Life",
-    tech: "Flutter, Dio, Firebase",
-    description:
-      "Community platform for Canadian immigrants covering travel, housing, education, and local resources.",
-    github: "",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.linkyou.lifeincanadaa&hl=en",
-    appStore: "https://apps.apple.com/eg/app/%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9-%D9%81%D9%8A-%D9%83%D9%86%D8%AF%D8%A7/id1593238063",
-  },
-];
+interface ProjectsSectionProps {
+  onOpenProjectModal?: (project: ProjectItem) => void;
+}
 
-export default function Projects() {
+type FilterCategory = "All" | "Full-Stack" | "Android / KMP" | "Flutter" | "Backend";
+
+export default function Projects({ onOpenProjectModal }: ProjectsSectionProps) {
+  const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
+
+  const categories: FilterCategory[] = ["All", "Android / KMP", "Flutter", "Backend"];
+
+  const filteredProjects = activeFilter === "All"
+    ? projectsData
+    : projectsData.filter((p) => p.category === activeFilter);
+
   return (
     <section id="projects" className="section-padding relative overflow-hidden">
-      <div className="gradient-blob gradient-blob-blue w-[200px] h-[200px] md:w-[400px] md:h-[400px] bottom-20 right-0 absolute" />
+      <div className="gradient-blob gradient-blob-blue w-[200px] h-[200px] md:w-[400px] md:h-[400px] bottom-20 right-0 absolute pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
-        {/* Section label */}
-        <div className="flex items-center gap-4 mb-8 md:mb-16">
-          <span className="font-body text-sm uppercase tracking-[0.3em] text-accent">
-            03
-          </span>
-          <div className="h-[1px] w-16 bg-accent/50" />
-          <span className="font-body text-sm uppercase tracking-[0.3em] text-text-muted">
-            Projects
-          </span>
+        {/* Section header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="font-body text-sm uppercase tracking-[0.3em] text-accent font-semibold">
+                03
+              </span>
+              <div className="h-[1px] w-16 bg-accent/50" />
+              <span className="font-body text-sm uppercase tracking-[0.3em] text-text-muted">
+                Portfolio
+              </span>
+            </div>
+
+            <h2 className="font-display text-section font-bold text-white leading-[1.1]">
+              Selected <span className="text-accent">Work</span> &amp; Case Studies
+            </h2>
+          </div>
+
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 text-sm font-body uppercase tracking-wider text-accent hover:text-accent-light transition-colors group shrink-0"
+          >
+            <span>View All Projects Archive</span>
+            <TbArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
-        <h2 className="font-display text-section font-bold text-white mb-10 md:mb-20 leading-[1.1]">
-          Selected <span className="text-accent">work</span>
-        </h2>
+        {/* Filter Category Tabs */}
+        <div className="flex items-center gap-2 pb-6 mb-10 overflow-x-auto custom-scroll border-b border-white/5">
+          <div className="flex items-center gap-1.5 text-xs text-text-muted mr-2 shrink-0">
+            <TbFilter className="w-4 h-4 text-accent" />
+            <span>Filter:</span>
+          </div>
+
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-body tracking-wider transition-all duration-300 shrink-0 ${
+                activeFilter === cat
+                  ? "bg-accent text-white font-medium shadow-lg shadow-accent/25"
+                  : "bg-white/5 text-text-muted hover:text-white hover:bg-white/10"
+              }`}
+            >
+              {cat}
+              <span className="ml-1.5 opacity-60 text-[10px]">
+                ({cat === "All" ? projectsData.length : projectsData.filter((p) => p.category === cat).length})
+              </span>
+            </button>
+          ))}
+        </div>
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, i) => (
+          {filteredProjects.map((project, i) => (
             <ProjectCard
-              key={i}
-              title={project.title}
-              tech={project.tech}
-              description={project.description}
+              key={project.id}
+              project={project}
               index={i}
-              github={project.github}
-              googlePlay={project.googlePlay}
-              appStore={project.appStore}
+              onOpenDetail={onOpenProjectModal}
             />
           ))}
         </div>

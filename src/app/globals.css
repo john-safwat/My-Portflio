@@ -296,6 +296,29 @@ body::before {
   font-size: 12.5px;
 }
 
+/* Custom scrollbars for modals and horizontal bars */
+.custom-modal-scroll::-webkit-scrollbar,
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-modal-scroll::-webkit-scrollbar-track,
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.custom-modal-scroll::-webkit-scrollbar-thumb,
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.custom-modal-scroll::-webkit-scrollbar-thumb:hover,
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.5);
+}
+
 /* Hide UI chrome on print */
 @media print {
   body::before {
@@ -303,19 +326,20 @@ body::before {
   }
   body {
     background: #ffffff !important;
+    color: #111111 !important;
   }
   .cv-no-print {
     display: none !important;
   }
-  .cv-sheet {
+  article {
+    border: none !important;
+    box-shadow: none !important;
     padding: 0 !important;
-    max-width: none !important;
-  }
-  .cv-page {
-    min-height: auto !important;
+    background: transparent !important;
+    color: #111111 !important;
   }
   @page {
     size: A4;
-    margin: 14mm;
+    margin: 12mm;
   }
 }
