@@ -10,12 +10,12 @@ interface ProjectsSectionProps {
   onOpenProjectModal?: (project: ProjectItem) => void;
 }
 
-type FilterCategory = "All" | "Android / KMP" | "Flutter" | "Backend";
+type FilterCategory = "All" | "Android / KMP" | "Flutter" | "Backend" | "AI & Systems";
 
 export default function Projects({ onOpenProjectModal }: ProjectsSectionProps) {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
 
-  const categories: FilterCategory[] = ["All", "Android / KMP", "Flutter", "Backend"];
+  const categories: FilterCategory[] = ["All", "Android / KMP", "Flutter", "Backend", "AI & Systems"];
 
   const filteredProjects = activeFilter === "All"
     ? projectsData

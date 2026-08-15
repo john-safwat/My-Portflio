@@ -15,7 +15,7 @@ function ProjectsPageContent() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [isCVOpen, setIsCVOpen] = useState(false);
 
-  const categories = ["All", "Android / KMP", "Flutter", "Backend"];
+  const categories = ["All", "Android / KMP", "Flutter", "Backend", "AI & Systems"];
 
   const filteredProjects = projectsData.filter((project) => {
     const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;

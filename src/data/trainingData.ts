@@ -23,6 +23,72 @@ export interface TrainingItem {
 
 export const trainingData: TrainingItem[] = [
   {
+    id: "route-academy",
+    slug: "route-academy",
+    role: "Mobile Instructor (Android, Flutter & React Native)",
+    organization: "Route Academy",
+    url: "https://www.linkedin.com/company/routeacademy/posts/?feedView=all",
+    date: "Jul 2024 — Present",
+    location: "Cairo, Egypt",
+    summary:
+      "Currently instructing comprehensive mobile engineering tracks for 100+ engineers across Android Native (Kotlin & Jetpack Compose), Flutter (Dart & BLoC), and React Native. Focusing on industry production standards, Clean Architecture, and real-world project delivery.",
+    stats: [
+      { label: "Students Mentored", value: "100+" },
+      { label: "Lab Projects", value: "20+" },
+      { label: "Tracks Instructed", value: "Android, Flutter, React Native" },
+      { label: "Satisfaction", value: "4.9 / 5.0" },
+    ],
+    highlights: [
+      "Instructing mobile engineering bootcamps across three major mobile ecosystems: Android Native, Flutter, and React Native.",
+      "Building hands-on production labs: E-commerce apps, food delivery clients, chat applications, and ride-hailing tracking clones.",
+      "Delivering deep dives into Clean Architecture, reactive state management (BLoC, ViewModel, Redux/Zustand), and offline database sync.",
+      "Guiding learners through API debugging, memory profiling, and automated app store publishing.",
+    ],
+    tracks: [
+      {
+        title: "Modern Android Native (Kotlin & Jetpack Compose)",
+        duration: "10 Weeks",
+        focus: ["Kotlin Coroutines & Flow", "Jetpack Compose UI", "Clean Architecture + MVVM/MVI", "Room DB", "Retrofit"],
+        description:
+          "Mastering declarative Android development from Kotlin fundamentals to multi-module architecture, dependency injection, and background work.",
+      },
+      {
+        title: "Flutter Clean Architecture & BLoC",
+        duration: "8 Weeks",
+        focus: ["Dart 3 Patterns", "BLoC & Cubit State Management", "Dio Interceptors", "Firebase & Socket.IO", "Store Deployment"],
+        description:
+          "Building performant cross-platform iOS and Android apps with strict separation of concerns and automated testing.",
+      },
+      {
+        title: "React Native & Cross-Platform Fundamentals",
+        duration: "6 Weeks",
+        focus: ["TypeScript & React Hooks", "React Native CLI / Expo", "State Management (Redux/Zustand)", "Native Modules & APIs", "Navigation"],
+        description:
+          "Equipping engineers to build cross-platform mobile experiences with React Native, modern hook-based architectures, and native device bridge integrations.",
+      },
+    ],
+    mentorshipMethodology: [
+      "Hands-On Debugging: Teaching students how to trace stack traces and profile memory leaks.",
+      "Pair Programming: Live refactoring of student code during weekly interactive workshops.",
+      "Career Mentorship: Resume reviews, portfolio building, and technical mock interviews.",
+    ],
+    keyTopicsTaught: [
+      "Kotlin",
+      "Android Native",
+      "Jetpack Compose",
+      "Flutter",
+      "Dart",
+      "React Native",
+      "TypeScript",
+      "Clean Architecture",
+      "MVI / MVVM",
+      "BLoC",
+      "Retrofit & Dio",
+      "Room & SQLite",
+      "Git & CI/CD",
+    ],
+  },
+  {
     id: "elevate-tech",
     slug: "elevate-tech",
     role: "Mobile Instructor & Lead Mentor",
@@ -31,7 +97,7 @@ export const trainingData: TrainingItem[] = [
     date: "Mar 2025 — Feb 2026",
     location: "Cairo, Egypt",
     summary:
-      "Instructed and mentored 120+ aspiring and junior software engineers in advanced mobile engineering. Designed rigorous hands-on tracks covering Android Native (Kotlin, Jetpack Compose), Kotlin Multiplatform (KMP), and Flutter Clean Architecture.",
+      "Instructed and mentored 120+ software engineers in advanced mobile engineering. Designed rigorous hands-on tracks covering Android Native (Kotlin, Jetpack Compose), Kotlin Multiplatform (KMP), and Flutter Clean Architecture.",
     stats: [
       { label: "Engineers Mentored", value: "120+" },
       { label: "Graduation Projects", value: "24+" },
@@ -85,63 +151,6 @@ export const trainingData: TrainingItem[] = [
       "Networking (Retrofit, Ktor, Dio)",
       "Dependency Injection (Hilt, Koin, GetIt)",
       "CI/CD (GitHub Actions, Fastlane)",
-    ],
-  },
-  {
-    id: "route-academy",
-    slug: "route-academy",
-    role: "Mobile Instructor & Mentor",
-    organization: "Route Academy",
-    url: "https://www.linkedin.com/company/routeacademy/posts/?feedView=all",
-    date: "Jul 2025 — Nov 2025",
-    location: "Cairo, Egypt",
-    summary:
-      "Delivered intensive mobile development bootcamps for 80+ trainees. Focused on core engineering fundamentals, Clean Architecture, reactive state management, and real-world API integration.",
-    stats: [
-      { label: "Students Mentored", value: "80+" },
-      { label: "Lab Projects", value: "15+" },
-      { label: "Role Progression", value: "Promoted to Instructor" },
-      { label: "Satisfaction", value: "4.8 / 5.0" },
-    ],
-    highlights: [
-      "Instructed mobile engineering bootcamps guiding students from core fundamentals to advanced proficiency.",
-      "Built hands-on production labs: E-commerce apps, weather clients, chat applications, and ride-hailing clones.",
-      "Promoted from Mobile Mentor to Instructor based on training excellence and high student achievement rates.",
-      "Guided learners through API debugging with Postman, Charles Proxy, and Chrome DevTools.",
-    ],
-    tracks: [
-      {
-        title: "Mobile Development Fundamentals to Advanced",
-        duration: "12 Weeks",
-        focus: ["OOP & SOLID Principles", "Android Native (Kotlin)", "Flutter Development", "REST API Consumption", "Local Databases"],
-        description:
-          "Foundational engineering bootcamp establishing solid problem-solving skills, algorithmic thinking, and modern mobile app structures.",
-      },
-      {
-        title: "State Management & Production Standards",
-        duration: "4 Weeks",
-        focus: ["BLoC Pattern", "MVVM Pattern", "Repository Pattern", "Error Handling & Logging", "Git Team Workflows"],
-        description:
-          "Transitioning students from basic scripts to scalable, maintainable multi-module software architectures.",
-      },
-    ],
-    mentorshipMethodology: [
-      "Hands-On Debugging: Teaching students how to trace stack traces and profile memory leaks.",
-      "Pair Programming: Live refactoring of student code during weekly interactive workshops.",
-      "Career Mentorship: Resume reviews, portfolio building, and technical mock interviews.",
-    ],
-    keyTopicsTaught: [
-      "Kotlin",
-      "Android Studio",
-      "Flutter",
-      "Dart",
-      "Clean Architecture",
-      "MVVM",
-      "BLoC",
-      "Retrofit & REST APIs",
-      "SQLite / Room",
-      "Git & GitHub",
-      "Postman",
     ],
   },
 ];
