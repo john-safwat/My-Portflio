@@ -282,17 +282,27 @@ export default function CVPage() {
           {/* Education */}
           <section className="mb-10">
             <h2 className="text-base font-display font-semibold text-accent mb-3 pb-1 border-b border-accent/20">
-              Education
+              Education &amp; Academic Honors
             </h2>
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
               <h3 className={`font-display text-base font-bold ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 Bachelor of Science in Computer Science
               </h3>
-              <span className="text-xs font-mono text-text-muted">2020 — 2024</span>
+              <span className="text-xs font-mono text-accent font-semibold">2020 — 2024 &bull; GPA 3.59 / 4.0 (Honors)</span>
             </div>
-            <p className={`font-body text-xs sm:text-sm ${isDarkMode ? "text-text-muted" : "text-gray-600"}`}>
-              Modern University for Technology &amp; Information (MTI) · Cairo, Egypt — <strong className={isDarkMode ? "text-accent-light" : "text-accent"}>GPA 3.59 / 4.0</strong>
+            <p className={`font-body text-xs sm:text-sm mb-3 ${isDarkMode ? "text-text-muted" : "text-gray-600"}`}>
+              Modern University for Technology &amp; Information (MTI) · Faculty of Computer Science, Cairo, Egypt
             </p>
+            <div className={`p-4 rounded-xl border text-xs sm:text-sm space-y-2 ${isDarkMode ? "bg-white/[0.02] border-white/5" : "bg-gray-50 border-gray-200"}`}>
+              <p className={isDarkMode ? "text-text-secondary" : "text-gray-700"}>
+                <strong className={isDarkMode ? "text-white" : "text-gray-900"}>Graduation Project: </strong>
+                Excellent (A+) — Intelligent On-Demand Mobile Delivery &amp; Logistics Ecosystem.
+              </p>
+              <p className={isDarkMode ? "text-text-secondary" : "text-gray-700"}>
+                <strong className={isDarkMode ? "text-white" : "text-gray-900"}>Relevant Coursework: </strong>
+                Data Structures &amp; Algorithms, Object-Oriented Programming (OOP), Software Architecture, Distributed Systems, Database Management Systems, Operating Systems.
+              </p>
+            </div>
           </section>
 
           {/* Languages */}

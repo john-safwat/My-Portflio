@@ -253,19 +253,23 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
         </div>
 
         {/* Section: Education */}
-        <div className="relative z-10 mb-8 p-5 rounded-2xl bg-white/[0.02] border border-white/5">
-          <h3 className="text-sm font-display text-accent-light font-semibold mb-3">
-            Education
+        <div className="relative z-10 mb-8 p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+          <h3 className="text-sm font-display text-accent-light font-semibold mb-2">
+            Education &amp; Academic Honors
           </h3>
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
             <span className="font-display text-base font-bold text-white">
-              BSc in Computer Science (GPA 3.59 / 4.0)
+              Bachelor of Science in Computer Science
             </span>
-            <span className="text-xs font-mono text-text-muted">2020 — 2024</span>
+            <span className="text-xs font-mono text-accent-light font-semibold">2020 — 2024 &bull; GPA 3.59 / 4.0 (Honors)</span>
           </div>
           <p className="font-body text-xs sm:text-sm text-text-muted">
-            Modern University for Technology & Information (MTI) · Cairo, Egypt
+            Modern University for Technology &amp; Information (MTI) · Faculty of Computer Science, Cairo, Egypt
           </p>
+          <div className="pt-2 text-xs text-text-secondary border-t border-white/5 space-y-1">
+            <p><strong className="text-white">Graduation Project:</strong> Excellent (A+) — Intelligent On-Demand Mobile Delivery &amp; Logistics Ecosystem.</p>
+            <p><strong className="text-white">Key Coursework:</strong> Data Structures &amp; Algorithms, OOP, Distributed Systems, Software Architecture, Operating Systems, Database Management Systems.</p>
+          </div>
         </div>
 
         {/* Section: Languages */}

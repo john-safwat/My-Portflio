@@ -88,8 +88,10 @@ Full-Stack Software Engineer with 3+ years of intensive engineering experience, 
 
 ---
 
-## **EDUCATION**
+## **EDUCATION & ACADEMIC HONORS**
 
 **Bachelor of Science in Computer Science**  
-Modern University for Technology & Information (MTI) · Cairo, Egypt (2020 — 2024)  
-*GPA: 3.59 / 4.0*
+Modern University for Technology & Information (MTI) · Faculty of Computer Science, Cairo, Egypt (2020 — 2024)  
+* **Cumulative GPA:** 3.59 / 4.0 (Very Good with Honors · Dean's List)
+* **Graduation Project:** Excellent (A+) — *Intelligent On-Demand Mobile Delivery & Operations Architecture*
+* **Core Coursework:** Data Structures & Algorithms, Object-Oriented Programming (OOP), Software Architecture, Distributed Systems, Database Management Systems (RDBMS/SQL), Operating Systems.
