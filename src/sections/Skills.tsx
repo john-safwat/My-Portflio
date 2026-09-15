@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 import { gsap } from "@/lib/gsap";
+
+const WebThreads = dynamic(() => import("@/components/WebThreads"), {
+  ssr: false,
+  loading: () => null,
+});
 import { IconType } from "react-icons";
 import {
   SiDart,
@@ -151,20 +157,31 @@ export default function Skills() {
       id="skills"
       className="section-padding relative overflow-hidden"
     >
-      {/* Video background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-          style={{ opacity: 0.3 }}
-        >
-          <source src="/skills-bg.webm" type="video/webm" />
-        </video>
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-bg/60" />
+      {/* WebThreads animation background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <WebThreads
+          color1="#5227FF"
+          color2="#FF9FFC"
+          color3="#FFFFFF"
+          speed={0.85}
+          threadCount={8}
+          frequency={12}
+          spread={0.2}
+          taper={0.55}
+          position={0.16}
+          fanMode="center"
+          glow={0.021}
+          falloff={0.58}
+          thickness={1.35}
+          brightness={0.55}
+          opacity={0.81}
+          mirror={true}
+          shimmer={false}
+          grain={true}
+          grainIntensity={0.05}
+          mouseInteraction={true}
+          mouseStrength={0.3}
+        />
       </div>
 
       {/* Background purple glow — bright center */}
