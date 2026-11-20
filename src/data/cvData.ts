@@ -44,7 +44,9 @@ export const fullStackCV: CVContent = {
         "Kazyon Plus Super-App (KMP): Led architectural migration from separate Android & iOS native codebases to unified Kotlin Multiplatform (KMP) & Compose Multiplatform, live in Egypt and Morocco.",
         "Performance Engineering: Reduced ANR rate by 98% (7.59% to 0.14%), cut crash rate to 0.19%, and improved cold-start time by 40%, driving a 500% MAU growth and 220% increase in online orders.",
         "Kazyon Biker (Flutter): Engineered the delivery operations app for pickers and bikers, managing real-time picking checklists, GPS route navigation, and shift attendance.",
-        "Kazyon Call Center AI Agent: Built an automated customer service AI agent powered by fine-tuned Local LLMs in Egyptian Arabic, answering customer calls over 3CX telephony and messaging on WhatsApp, Facebook, and Instagram.",
+        "Kazyon Call Center AI Agent: Built an omnichannel AI customer service agent with fine-tuned Egyptian Arabic TTS, ASR, and Local LLMs, handling customer orders, complaints, and inquiries over 3CX phone calls and all social platforms.",
+        "Kazyon NetOps AI Agent: Built an autonomous 24/7 AI agent on open-source AI models monitoring 1,200+ branches across Egypt, running diagnostics for timely sales syncs, coordinating ISP/branch issues via a monitoring dashboard, and achieving 97% zero-touch resolution.",
+        "Kazyon Fleet Management: Designed custom embedded hardware and PCBs for truck smart locks and sensor telemetry across the fleet, and contributed to the companion Android app controlling and reading hardware data.",
         "Kazyon Dashboard App (Flutter): Developed the enterprise mobile dashboard for Area and Store Managers, tracking live store KPIs, staff shifts, cash balances, and integrating the internal KAI AI chatbot.",
         "Kazyon Orders & Loyalty Services (Spring Boot): Contributed to high-throughput Spring Boot microservices handling core checkout calculations and customer loyalty rewards across Egypt and Morocco.",
       ],
@@ -101,7 +103,7 @@ export const fullStackCV: CVContent = {
   skills: [
     { label: "Mobile Development", value: "Kotlin Multiplatform (KMP), Compose Multiplatform, Android Native (Kotlin & Jetpack Compose), Flutter (Dart), React Native" },
     { label: "Backend & Cloud", value: "Java, Spring Boot, Spring MVC, Spring Data JPA, RESTful API design, Microservices architecture, Docker, PostgreSQL" },
-    { label: "AI & Telephony", value: "Local LLMs, Egyptian Arabic NLP, 3CX Telephony Phone Systems, WhatsApp API, Messenger, Instagram Graph API, AI Agents" },
+    { label: "AI, Voice & IoT", value: "Open-Source & Local LLMs, Fine-Tuned Egyptian Arabic TTS & ASR, Autonomous NetOps Agents, 3CX Telephony, Embedded Hardware & PCB Design" },
     { label: "Architecture", value: "Clean Architecture, MVI, MVVM, SOLID Principles, Unidirectional Data Flow (UDF)" },
     { label: "State Management", value: "BLoC / Cubit, ViewModel (Android/KMP), Redux, Provider" },
     { label: "Networking & Real-Time", value: "REST APIs, Microservices, WebSockets, Socket.IO, Ktor, Retrofit, Dio" },
@@ -125,9 +127,28 @@ export const fullStackCV: CVContent = {
     },
     {
       title: "Kazyon Call Center AI Agent",
-      tech: "Local LLMs, Python, 3CX Telephony, WhatsApp API, Egyptian Arabic NLP",
+      tech: "Local LLMs, Fine-Tuned Egyptian Arabic TTS & ASR, Python, 3CX Telephony, Social Platforms",
       description:
-        "Omnichannel AI customer service agent responding to customer phone calls over 3CX and chats on WhatsApp, Facebook, and Instagram in authentic Egyptian Arabic dialect.",
+        "Omnichannel AI customer service agent with fine-tuned Egyptian Arabic TTS & ASR models handling customer orders, complaints, and inquiries over 3CX phone calls and all social platforms.",
+    },
+    {
+      title: "Kazyon NetOps AI Agent",
+      tech: "Open-Source AI Models, Autonomous AI Agents, Python, 24/7 Diagnostics, Monitoring Dashboard",
+      description:
+        "Autonomous 24/7 NetOps AI agent monitoring 1,200+ branches across Egypt, ensuring timely sales updates, coordinating ISP/branch issues, and achieving 97% zero-touch automatic resolution.",
+    },
+    {
+      title: "Kazyon Fleet Management — Embedded Hardware & Android",
+      tech: "Embedded Systems, PCB Design, Smart Locks & Sensors, Android Native (Kotlin)",
+      description:
+        "Designed custom embedded hardware and PCBs for fleet truck locks and sensor telemetry, plus built the Android application to control and read live hardware data.",
+    },
+    {
+      title: "Store POS System — Multi-Platform",
+      tech: "Web App, Desktop App, Mobile App, Retail POS & Inventory",
+      description:
+        "Independent retail store Point of Sale (POS) application running seamlessly across Web, Desktop, and Mobile platforms.",
+      link: "https://pos.johnsafwat.online",
     },
     {
       title: "Kazyon Management Dashboard App",
@@ -201,7 +222,9 @@ export const mobileCV: CVContent = {
         "Kazyon Plus Super-App (KMP): Led the architectural redesign and migration from separate native codebases to unified Kotlin Multiplatform and Compose Multiplatform, live in Egypt and Morocco.",
         "Transformative Performance Gains: Reduced ANR rate by 98% (7.59% to 0.14%), cut crash rate to 0.19%, and shortened app launch time by 40%.",
         "Kazyon Biker (Flutter): Engineered the delivery operations app for pickers and bikers, managing real-time order picking, GPS routing, and shift attendance.",
-        "Kazyon Call Center AI Agent: Built an automated AI customer support agent powered by fine-tuned Local LLMs in Egyptian Arabic, handling 3CX phone calls and social chats.",
+        "Kazyon Call Center AI Agent: Built an omnichannel AI customer support agent with fine-tuned Egyptian Arabic TTS, ASR, and Local LLMs, handling orders, complaints, and inquiries over 3CX phone calls and all social platforms.",
+        "Kazyon NetOps AI Agent: Built an autonomous 24/7 AI agent on open-source AI models monitoring 1,200+ branches across Egypt with 97% automatic zero-touch resolution.",
+        "Kazyon Fleet Management: Designed custom embedded hardware & PCBs for truck smart locks and sensor telemetry, and developed the Android app controlling and reading hardware data.",
         "Kazyon Dashboard App (Flutter): Created the enterprise executive app for live store KPIs, staff shifts, cash audits, and the internal KAI AI chatbot.",
       ],
     },
@@ -255,7 +278,7 @@ export const mobileCV: CVContent = {
     { label: "State Management", value: "BLoC / Cubit, ViewModel (Android/KMP), Redux, Provider" },
     { label: "Networking & Real-Time", value: "REST APIs, Microservices, WebSockets, Socket.IO, Ktor, Retrofit, Dio" },
     { label: "Messaging & Push", value: "Firebase Cloud Messaging (FCM), Background Geolocation, Google Maps SDK" },
-    { label: "AI Integration", value: "Local LLM Agents, 3CX Telephony, Social Media Chatbots" },
+    { label: "AI, Voice & Hardware", value: "Local LLMs, Fine-Tuned Egyptian Arabic TTS & ASR, 3CX Telephony, Embedded Hardware & PCB Design" },
     { label: "Dependency Injection", value: "Hilt, Koin, GetIt, Injectable" },
     { label: "Local Storage", value: "Room DB, SQLite / Sqflite, Hive, Isar, DataStore" },
     { label: "DevOps & Testing", value: "Git, GitHub Actions CI/CD, Fastlane, Unit / Widget Testing" },
@@ -275,9 +298,28 @@ export const mobileCV: CVContent = {
     },
     {
       title: "Kazyon Call Center AI Agent",
-      tech: "Local LLMs, Python, 3CX Telephony, WhatsApp API, Egyptian Arabic NLP",
+      tech: "Local LLMs, Fine-Tuned Egyptian Arabic TTS & ASR, Python, 3CX Telephony, Social Platforms",
       description:
-        "Omnichannel AI customer service agent responding to customer phone calls over 3CX and chats on WhatsApp, Facebook, and Instagram.",
+        "Omnichannel AI customer service agent with fine-tuned Egyptian Arabic TTS & ASR handling customer orders, complaints, and inquiries over 3CX phone calls and all social platforms.",
+    },
+    {
+      title: "Kazyon NetOps AI Agent",
+      tech: "Open-Source AI Models, Autonomous AI Agents, Python, 24/7 Diagnostics, Dashboard",
+      description:
+        "Autonomous 24/7 NetOps AI agent monitoring 1,200+ sites across Egypt and resolving 97% of network issues automatically with zero human-in-the-loop.",
+    },
+    {
+      title: "Kazyon Fleet Management — Embedded & Android",
+      tech: "Embedded Systems, PCB Design, Smart Locks & Sensors, Android Native (Kotlin)",
+      description:
+        "Custom embedded hardware and PCB design for fleet truck locks and sensors paired with an Android application controlling and reading hardware telemetry.",
+    },
+    {
+      title: "Store POS System — Multi-Platform",
+      tech: "Web App, Desktop App, Mobile App, Retail POS",
+      description:
+        "Independent retail store Point of Sale (POS) application running across Web, Desktop, and Mobile platforms.",
+      link: "https://pos.johnsafwat.online",
     },
     {
       title: "Kazyon Management Dashboard App",

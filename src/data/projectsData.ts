@@ -3,7 +3,7 @@ export interface ProjectItem {
   slug: string;
   title: string;
   subtitle: string;
-  category: "Android / KMP" | "Flutter" | "Backend" | "AI & Systems";
+  category: "Android / KMP" | "Flutter" | "Full-Stack" | "Backend" | "AI & Systems" | "Embedded & IoT";
   tech: string;
   techTags: string[];
   description: string;
@@ -94,33 +94,101 @@ export const projectsData: ProjectItem[] = [
     id: "kazyon-ai-agent",
     slug: "kazyon-ai-agent",
     title: "Kazyon Call Center AI Agent",
-    subtitle: "Omnichannel Customer Support Agent with Egyptian Arabic Local LLMs",
+    subtitle: "Omnichannel Customer Support AI with Fine-Tuned Egyptian Arabic TTS, ASR & Local LLMs",
     category: "AI & Systems",
-    tech: "Local LLMs, Python, 3CX Telephony, WhatsApp API, Messenger, Instagram Graph API",
-    techTags: ["Local LLMs", "Python", "3CX Phone Calls", "Egyptian Arabic NLP", "WhatsApp API", "Webhooks", "FastAPI"],
+    tech: "Local LLMs, Fine-Tuned Egyptian Arabic TTS & ASR, Python, 3CX Telephony, WhatsApp API, Messenger, Instagram Graph API",
+    techTags: ["Local LLMs", "Fine-Tuned TTS", "Fine-Tuned ASR", "Egyptian Arabic NLP", "3CX Phone Calls", "Python", "Social Platforms", "FastAPI"],
     description:
-      "Automated customer service AI agent powered by fine-tuned Local LLMs in Egyptian Arabic, handling voice calls over 3CX and chats on WhatsApp, Facebook, and Instagram.",
+      "Automated omnichannel customer service AI agent with fine-tuned Egyptian Arabic TTS, ASR, and Local LLMs — handling customer orders, complaints, and inquiries over 3CX phone calls and all social platforms.",
     longDescription:
-      "Engineered an omnichannel AI call center agent designed to autonomously understand, converse, and resolve customer issues in authentic Egyptian Arabic dialect. The agent directly integrates into the 3CX phone PBX system for live voice inquiries as well as social messaging channels (WhatsApp, Facebook Messenger, and Instagram Direct), resolving order status queries, missing items, refund requests, and store inquiries.",
+      "Engineered an omnichannel AI call center and customer service agent powered by custom fine-tuned Speech-to-Text (ASR), Text-to-Speech (TTS), and Local LLM models tailored specifically for authentic Egyptian Arabic dialect. Directly integrated into the 3CX telephony system for live phone calls as well as all major social platforms (WhatsApp, Facebook Messenger, Instagram, and more) to autonomously handle customer orders, complaints, and inquiries end-to-end.",
     metrics: [
+      { label: "Voice Models", value: "Fine-Tuned EG ASR & TTS" },
       { label: "Voice PBX", value: "3CX Telephony Live" },
-      { label: "Dialect Support", value: "Egyptian Arabic NLP" },
-      { label: "Channels", value: "Voice, WA, FB, IG" },
-      { label: "Core Model", value: "Fine-Tuned Local LLMs" },
+      { label: "Channels", value: "Phone & All Socials" },
+      { label: "Scope", value: "Orders, Complaints & FAQ" },
     ],
     architectureOverview:
-      "Built with Python and high-concurrency FastAPI microservices hosting quantized local LLMs for low-latency inference. Connected to the 3CX phone system via SIP/RTP audio streams and real-time Speech-to-Text / Text-to-Speech engines, with webhooks routing social media messages into a unified RAG context pipeline.",
+      "Built with Python and high-concurrency FastAPI microservices running custom fine-tuned Egyptian Arabic ASR (Automatic Speech Recognition), natural-sounding Egyptian Arabic TTS (Text-to-Speech), and quantized Local LLMs for low-latency on-premise inference. Connected to the 3CX phone system via real-time SIP/RTP audio streams while unified webhooks route conversations from all social media platforms into a shared RAG and order-handling pipeline.",
     keyFeatures: [
-      "Real-time voice conversation answering customer calls on the 3CX telephony network.",
-      "Native comprehension of Egyptian Arabic slang, colloquial vocabulary, and customer sentiments.",
-      "Omnichannel chat automation across WhatsApp Business API, Facebook Messenger, and Instagram.",
-      "Automated order tracking, complaint ticketing, and escalation to human supervisors.",
-      "Strict data privacy and security with local on-premise model execution.",
+      "Custom fine-tuned Egyptian Arabic ASR & TTS voice pipeline powering natural live phone conversations over 3CX.",
+      "End-to-end automated handling of customer orders, complaint ticketing, refund requests, and store/product inquiries.",
+      "Omnichannel support across 3CX voice calls and all major social platforms (WhatsApp, Facebook Messenger, Instagram, etc.).",
+      "Native comprehension of Egyptian Arabic slang, colloquial vocabulary, accents, and customer sentiments.",
+      "Strict data privacy with local on-premise model execution and seamless escalation to human supervisors when needed.",
     ],
     technicalChallenges: [
-      "Achieving sub-second voice response latency on conversational turns over 3CX audio streams.",
-      "Fine-tuning local language models to accurately comprehend Egyptian dialect nuances and supermarket terminology.",
-      "Maintaining contextual session state across channel switches (e.g. caller who also messaged on WhatsApp).",
+      "Fine-tuning ASR and TTS models on Egyptian Arabic speech to accurately recognize regional accents over noisy telephony audio and synthesize natural responses.",
+      "Achieving sub-second conversational turn-taking across the full ASR → Local LLM → TTS pipeline over 3CX audio streams.",
+      "Maintaining unified order, complaint, and session context across 3CX voice calls and all social messaging platforms.",
+    ],
+    featured: true,
+  },
+  {
+    id: "kazyon-netops",
+    slug: "kazyon-netops",
+    title: "Kazyon NetOps AI Agent",
+    subtitle: "24/7 Autonomous Network Monitoring & Diagnostics Across 1,200+ Branches in Egypt",
+    category: "AI & Systems",
+    tech: "Open-Source AI Models, Autonomous AI Agents, Python, Network Diagnostics, Real-Time Dashboard, ISP Automation",
+    techTags: ["Open-Source AI", "AI Agents", "NetOps Automation", "24/7 Diagnostics", "Monitoring Dashboard", "ISP Integration", "Python", "1,200+ Sites"],
+    description:
+      "Autonomous 24/7 NetOps AI agent built on open-source AI models monitoring 1,200+ Kazyon sites across Egypt — running diagnostics, ensuring timely sales syncs, and resolving 97% of network issues with zero human-in-the-loop.",
+    longDescription:
+      "Built an autonomous Network Operations (NetOps) AI agent on top of open-source AI models to monitor and run 24/7 diagnostic inspections across more than 1,200 Kazyon retail branches nationwide in Egypt. The agent ensures every site maintains a healthy network and that daily sales updates arrive on time, proactively coordinating and resolving connectivity issues with ISPs and branch teams through a detailed monitoring dashboard — achieving 97% automatic issue handling with no human needed in the loop.",
+    metrics: [
+      { label: "Auto-Resolution", value: "97% Zero-Touch" },
+      { label: "Branch Coverage", value: "1,200+ Sites (Egypt)" },
+      { label: "Operations", value: "24/7 Diagnostics" },
+      { label: "AI Foundation", value: "Open-Source AI Model" },
+    ],
+    architectureOverview:
+      "Architected as a continuous 24/7 autonomous agentic workflow powered by open-source AI models executing automated network diagnostic inspections across 1,200+ distributed retail sites. Diagnostic signals feed an automated incident triage and remediation engine that coordinates directly with ISPs and branches, backed by a detailed real-time dashboard tracking network health, sales-sync timeliness, and automated resolution rates.",
+    keyFeatures: [
+      "24/7 continuous automated diagnostic inspections across 1,200+ Kazyon branches throughout Egypt.",
+      "Proactive verification guaranteeing branch sales updates arrive reliably and on schedule.",
+      "97% automatic handling and resolution of network issues without requiring human intervention.",
+      "Automated troubleshooting and issue coordination with ISPs and branch operations.",
+      "Detailed real-time NetOps monitoring dashboard visualizing site health, active incidents, and SLA metrics.",
+    ],
+    technicalChallenges: [
+      "Scaling continuous 24/7 diagnostic checks and anomaly detection reliably across 1,200+ branches spanning multiple Egyptian ISPs.",
+      "Building deterministic diagnostic tool-calling and verification workflows on open-source AI models to achieve 97% zero-touch resolution.",
+      "Correlating real-time network telemetry with branch sales-sync pipelines to prevent delayed reporting.",
+    ],
+    featured: true,
+  },
+  {
+    id: "kazyon-fleet-management",
+    slug: "kazyon-fleet-management",
+    title: "Kazyon Fleet Management",
+    subtitle: "Custom Embedded Hardware, PCB Design, Smart Locks & Android Control App",
+    category: "Embedded & IoT",
+    tech: "Embedded Systems, PCB Design, Smart Locks & Sensors, Android Native (Kotlin), Fleet Telemetry",
+    techTags: ["Embedded Hardware", "PCB Design", "Smart Locks", "IoT Sensors", "Android Native", "Kotlin", "Fleet Telemetry"],
+    description:
+      "End-to-end truck fleet and inventory management system — engineered custom embedded hardware, PCB design, smart lock & sensor modules, plus the Android app controlling and monitoring live fleet telemetry.",
+    longDescription:
+      "Fleet and inventory management platform built for Kazyon's logistics trucks across Egypt. Owned the end-to-end design and engineering of the custom embedded hardware and printed circuit boards (PCBs) that control cargo locks and capture onboard sensor readings across the fleet, ensuring live visibility and asset security. Also worked on the companion Android application responsible for controlling the hardware locks and reading live sensor telemetry directly from the embedded unit.",
+    metrics: [
+      { label: "Hardware Role", value: "Embedded & PCB Design" },
+      { label: "Cargo Security", value: "Smart Locks & Sensors" },
+      { label: "Mobile Client", value: "Android Control App" },
+      { label: "Telemetry", value: "Fleet-Wide Monitoring" },
+    ],
+    architectureOverview:
+      "Combines custom-engineered embedded hardware and purpose-built PCBs mounted across fleet trucks with a dedicated Android control application. The embedded hardware drives electronic cargo locks and continuously samples onboard sensors for fleet-wide monitoring, while interfacing reliably with the Android app for authorized lock actuation, diagnostics, and real-time data readout.",
+    keyFeatures: [
+      "Custom embedded hardware architecture and PCB design engineered for reliable vehicular operation.",
+      "Smart electronic cargo lock control paired with real-time onboard sensor monitoring across the fleet.",
+      "Fleet-wide telemetry visibility ensuring continuous tracking of truck status, locks, and inventory conditions.",
+      "Companion Android application enabling operators to control hardware locks and read live sensor data.",
+      "Unified hardware-to-mobile workflow aligning physical cargo security with fleet inventory management.",
+    ],
+    technicalChallenges: [
+      "Designing rugged custom PCBs and embedded electronics capable of handling vehicular power fluctuations, heat, and vibration.",
+      "Guaranteeing accurate sensor readings and fail-safe smart lock operation across active delivery trucks.",
+      "Building reliable, low-latency communication between the Android application and custom embedded hardware.",
     ],
     featured: true,
   },
@@ -188,6 +256,42 @@ export const projectsData: ProjectItem[] = [
       "Handling massive promotional traffic spikes during retail flash sales without database locks.",
       "Ensuring strict ACID consistency between order creation, coupon validation, and wallet balance deductions.",
     ],
+    featured: true,
+  },
+
+  // --- INDIVIDUAL PROJECTS ---
+  {
+    id: "pos-system",
+    slug: "pos-system",
+    title: "Store POS System",
+    subtitle: "Cross-Platform Point of Sale for Retail Stores (Web, Desktop & Mobile)",
+    category: "Full-Stack",
+    tech: "Multi-Platform POS (Web, Desktop & Mobile), Retail Inventory, Sales & Checkout, Cloud Sync",
+    techTags: ["Web App", "Desktop App", "Mobile App", "Point of Sale", "Inventory Management", "Multi-Platform"],
+    description:
+      "Independent Point of Sale (POS) application built for retail stores, running seamlessly across Web, Desktop, and Mobile platforms.",
+    longDescription:
+      "An independent multi-platform Point of Sale (POS) system crafted for retail stores. Designed to operate seamlessly across Web browsers, Desktop applications, and Mobile devices so merchants and cashiers can run checkout operations, manage product catalogs, track inventory, and monitor store sales from any counter or handheld terminal.",
+    metrics: [
+      { label: "Platforms", value: "Web, Desktop & Mobile" },
+      { label: "Domain", value: "Retail Store POS" },
+      { label: "Type", value: "Individual Project" },
+      { label: "Status", value: "Live Production" },
+    ],
+    architectureOverview:
+      "Engineered as a unified multi-platform retail POS ecosystem delivering consistent cashier and back-office workflows across Web, Desktop, and Mobile clients with real-time synchronized product catalogs, sales records, and store inventory.",
+    keyFeatures: [
+      "Unified POS experience running natively across Web, Desktop, and Mobile applications.",
+      "Fast cashier checkout workflow with product search, cart calculations, discounts, and receipts.",
+      "Centralized inventory management and live stock updates across connected store terminals.",
+      "Sales reporting, transaction history, and daily store performance overview.",
+      "Live production web deployment accessible at pos.johnsafwat.online.",
+    ],
+    technicalChallenges: [
+      "Designing an adaptive, speed-focused POS interface that works effortlessly on Desktop counters, Web browsers, and Mobile touchscreens.",
+      "Ensuring reliable real-time synchronization of sales transactions and inventory counts across multiple client platforms.",
+    ],
+    liveDemo: "https://pos.johnsafwat.online",
     featured: true,
   },
 

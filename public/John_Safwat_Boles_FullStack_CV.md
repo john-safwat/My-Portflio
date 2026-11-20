@@ -22,7 +22,9 @@ Full-Stack Software Engineer with 3+ years of intensive engineering experience, 
 * **Kazyon Plus Super-App (KMP):** Led architectural migration from separate Android & iOS native codebases to unified Kotlin Multiplatform (KMP) & Compose Multiplatform, live in Egypt and Morocco.
 * **Performance Engineering:** Reduced ANR rate by 98% (7.59% to 0.14%), cut crash rate to 0.19%, and improved cold-start time by 40%, driving a 500% MAU growth and 220% increase in online orders.
 * **Kazyon Biker (Flutter):** Engineered the delivery operations app for pickers and bikers, managing real-time picking checklists, GPS route navigation, and shift attendance.
-* **Kazyon Call Center AI Agent:** Built an automated customer service AI agent powered by fine-tuned Local LLMs in Egyptian Arabic, answering customer calls over 3CX telephony and messaging on WhatsApp, Facebook, and Instagram.
+* **Kazyon Call Center AI Agent:** Built an omnichannel AI customer service agent with fine-tuned Egyptian Arabic TTS, ASR, and Local LLMs, handling customer orders, complaints, and inquiries over 3CX phone calls and all major social platforms.
+* **Kazyon NetOps AI Agent:** Built an autonomous 24/7 AI agent on open-source AI models monitoring 1,200+ branches across Egypt, running diagnostics for timely sales syncs, coordinating ISP/branch issues via a monitoring dashboard, and achieving 97% zero-touch resolution.
+* **Kazyon Fleet Management (Embedded & Android):** Designed custom embedded hardware and PCBs for truck smart locks and sensor telemetry across the fleet, and worked on the companion Android app controlling and reading hardware data.
 * **Kazyon Dashboard App (Flutter):** Developed the enterprise mobile dashboard for Area and Store Managers, tracking live store KPIs, staff shifts, cash balances, and integrating the internal KAI AI chatbot.
 * **Kazyon Orders & Loyalty Services (Spring Boot):** Contributed to high-throughput Spring Boot microservices handling core checkout calculations and customer loyalty rewards across Egypt and Morocco.
 
@@ -60,7 +62,7 @@ Full-Stack Software Engineer with 3+ years of intensive engineering experience, 
 
 * **Mobile Development:** Kotlin Multiplatform (KMP), Compose Multiplatform, Android Native (Kotlin & Jetpack Compose), Flutter (Dart), React Native
 * **Backend & Cloud:** Java, Spring Boot, Spring MVC, Spring Data JPA, RESTful API design, Microservices architecture, Docker, PostgreSQL
-* **AI & Telephony:** Local LLMs, Egyptian Arabic NLP, 3CX Telephony Phone Systems, WhatsApp API, Messenger, Instagram Graph API, AI Agents
+* **AI, Voice & IoT:** Open-Source & Local LLMs, Fine-Tuned Egyptian Arabic TTS & ASR, Autonomous NetOps Agents, 3CX Telephony Phone Systems, Embedded Hardware & PCB Design
 * **Architecture:** Clean Architecture, MVI, MVVM, SOLID Principles, Unidirectional Data Flow (UDF)
 * **State Management:** BLoC / Cubit, ViewModel (Android/KMP), Redux, Provider
 * **Networking & Real-Time:** REST APIs, Microservices, WebSockets, Socket.IO, Ktor, Retrofit, Dio
@@ -75,7 +77,10 @@ Full-Stack Software Engineer with 3+ years of intensive engineering experience, 
 
 * **Kazyon Plus — E-Commerce Super-App (KMP):** High-traffic retail & grocery super-app migrated from native Android & iOS codebases to unified KMP, live in Egypt and Morocco. Cut ANRs by 98% and boosted MAU by 500%.
 * **Kazyon Biker — Delivery & Operations App (Flutter):** Operations mobile app for Kazyon delivery agents, pickers, and bikers — managing order assignments, GPS route tracking, and shift attendance.
-* **Kazyon Call Center AI Agent:** Omnichannel AI customer service agent responding to customer phone calls over 3CX and chats on WhatsApp, Facebook, and Instagram in authentic Egyptian Arabic dialect.
+* **Kazyon Call Center AI Agent:** Omnichannel AI customer service agent with fine-tuned Egyptian Arabic TTS & ASR models handling customer orders, complaints, and inquiries over 3CX phone calls and all social platforms.
+* **Kazyon NetOps AI Agent:** Autonomous 24/7 AI agent built on open-source AI models monitoring 1,200+ branches across Egypt, ensuring timely sales syncs, coordinating ISP/branch issues via a detailed dashboard, and achieving 97% automatic zero-touch resolution.
+* **Kazyon Fleet Management (Embedded & Android):** Custom embedded hardware and PCB design for fleet truck smart locks and sensor telemetry paired with an Android application controlling and reading hardware data.
+* **Store POS System (Web, Desktop & Mobile):** Independent retail store Point of Sale (POS) application running seamlessly across Web, Desktop, and Mobile platforms ([pos.johnsafwat.online](https://pos.johnsafwat.online)).
 * **Kazyon Management Dashboard App (Flutter):** Enterprise mobile dashboard for Area and Store Managers — live store revenue, staff shifts, cash balances, and the internal AI chatbot KAI.
 * **Kazyon Orders & Loyalty Services — Backend:** Spring Boot microservices powering checkout calculations and loyalty point redemptions in Egypt and Morocco.
 * **Sheft — Influencer Marketing Platform (Flutter):** Connects commercial brands with digital content creators in Saudi Arabia. Real-time messaging, video request workflows, and automated multi-flavor CI/CD.

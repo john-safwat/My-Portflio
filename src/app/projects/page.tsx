@@ -15,7 +15,7 @@ function ProjectsPageContent() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [isCVOpen, setIsCVOpen] = useState(false);
 
-  const categories = ["All", "Android / KMP", "Flutter", "Backend", "AI & Systems"];
+  const categories = ["All", "Android / KMP", "Flutter", "Full-Stack", "Backend", "AI & Systems", "Embedded & IoT"];
 
   const filteredProjects = projectsData.filter((project) => {
     const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;
@@ -58,15 +58,16 @@ function ProjectsPageContent() {
           </h1>
 
           <p className="font-body text-base sm:text-lg text-text-muted max-w-3xl leading-relaxed">
-            A comprehensive showcase of production mobile super-apps, cross-platform applications,
-            and high-throughput Spring Boot backend microservices built for millions of users.
+            A comprehensive showcase of production mobile super-apps, autonomous AI agents,
+            embedded IoT fleet hardware, multi-platform POS software, and high-throughput Spring Boot
+            backend microservices.
           </p>
 
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/5">
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-              <div className="font-display text-2xl sm:text-3xl font-bold text-accent-light">8+</div>
-              <div className="font-body text-xs text-text-muted mt-1">Production Apps</div>
+              <div className="font-display text-2xl sm:text-3xl font-bold text-accent-light">15+</div>
+              <div className="font-body text-xs text-text-muted mt-1">Production Projects</div>
             </div>
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
               <div className="font-display text-2xl sm:text-3xl font-bold text-emerald-400">98%</div>

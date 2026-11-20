@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ProjectItem } from "@/data/projectsData";
 import { SiGoogleplay, SiApple, SiGithub } from "react-icons/si";
-import { TbExternalLink, TbSparkles } from "react-icons/tb";
+import { TbExternalLink, TbSparkles, TbWorld } from "react-icons/tb";
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -82,7 +82,7 @@ export default function ProjectCard({
 
         {/* Background Project Index Number */}
         <span className="font-display text-7xl font-bold text-white/[0.03] group-hover:text-accent/[0.08] transition-colors absolute top-4 right-6 pointer-events-none select-none">
-          0{index + 1}
+          {String(index + 1).padStart(2, "0")}
         </span>
 
         {/* Card Header & Content */}
@@ -134,8 +134,20 @@ export default function ProjectCard({
             <TbExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>
 
-          {/* Direct Store / Repo Links */}
+          {/* Direct Store / Repo / Live Links */}
           <div className="flex items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+            {project.liveDemo && (
+              <a
+                href={project.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg border border-white/10 flex items-center justify-center text-text-muted hover:text-accent-light hover:border-accent/40 hover:bg-accent/10 transition-all"
+                title="Live Demo"
+                aria-label="Live Demo"
+              >
+                <TbWorld className="w-4 h-4" />
+              </a>
+            )}
             {project.github && (
               <a
                 href={project.github}
